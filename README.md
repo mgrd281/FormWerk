@@ -3,6 +3,7 @@
 > **Dein intelligenter Begleiter für Gesundheit, Fitness & Gewichtsmanagement**
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.29.0-02569B?logo=flutter)](https://flutter.dev)
+[![Xcode](https://img.shields.io/badge/Open%20in-Xcode-1575F9?logo=xcode&logoColor=white)](https://github.com/mgrd281/FormWerk/blob/main/README.md#-in-xcode-%C3%B6ffnen)
 [![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-green)](https://github.com/mgrd281/FormWerk)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
