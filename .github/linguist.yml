@@ -1,38 +1,41 @@
-# Override GitHub Linguist to enable "Open with Xcode" button
-# Strategy: Demote Dart, Promote Swift/Objective-C
+# Force GitHub: Show "Open with Xcode" button in Code dropdown
+# 
+# GitHub shows this button ONLY when:
+# 1. .xcodeproj/.xcworkspace exists ✅ (we have it)
+# 2. Swift/ObjC is a PRIMARY language (not generated) ❌ (Dart dominates)
+#
+# Solution: Mark ALL Dart as documentation, keep Swift as real code
 
-# Define languages
-languages:
-  - name: Swift
-    color: "#F05138"
-    extensions:
-      - ".swift"
-    linguist_language_id: 448
-  - name: Objective-C
-    color: "#438EFF"
-    extensions:
-      - ".h"
-      - ".m"
-    linguist_language_id: 42
-
-# CRITICAL OVERRIDES:
-# 1. Treat iOS folder as PRIMARY source code (not generated)
-# 2. Demote lib/ (Dart) to reduce its dominance in language stats
 overrides:
-  # iOS = Native code - NEVER treat as generated
+  # === DEMOTE DART (Flutter code) ===
+  # Treat all Dart as documentation so it doesn't count toward language %
+  "**/*.dart":
+    linguist-documentation: true
+  
+  # === PROMOTE SWIFT / OBJ-C (iOS native code) ===  
   "ios/**":
     linguist-generated: false
     linguist-vendored: false
     linguist-documentation: false
+    linguist-detectable: true
   "ios/**/*.swift":
     linguist-language: Swift
+    linguist-generated: false
   "ios/**/*.h":
     linguist-language: Objective-C
+    linguist-generated: false
   "ios/**/*.m":
     linguist-language: Objective-C
-  
-  # Mark most Dart/Flutter files as documentation to reduce their weight
-  "lib/**/*.dart":
-    linguist-documentation: true
-  "test/**/*.dart":
+    linguist-generated: false
+    
+  # Hide generated/vendored files
+  ".flutter-plugins":
     linguist-generated: true
+  ".flutter-plugins-dependencies":
+    linguist-generated: true
+  "pubspec.lock":
+    linguist-generated: true
+  "android/**/*.kt":
+    linguist-documentation: true
+  "android/**/*.java":
+    linguist-documentation: true
