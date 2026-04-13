@@ -2,8 +2,7 @@
 
 > **Dein intelligenter Begleiter für Gesundheit, Fitness & Gewichtsmanagement**
 
-[![Flutter](https://img.shields.io/badge/Flutter-3.29.0-02569B?logo=flutter)](https://flutter.dev)
-[![Xcode](https://img.shields.io/badge/Open%20in-Xcode-1575F9?logo=xcode&logoColor=white)](https://github.com/mgrd281/FormWerk/blob/main/README.md#-in-xcode-%C3%B6ffnen)
+[![Flutter](https://img.shields.io/badge/Flutter-3.41-02569B?logo=flutter)](https://flutter.dev)
 [![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-green)](https://github.com/mgrd281/FormWerk)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
@@ -33,10 +32,13 @@ FormWerk ist eine Premium-Flutter-App für ganzheitliches Gesundheitsmanagement.
 
 ### Voraussetzungen
 
-- **Flutter SDK** ≥ 3.29.0 ([Installationsanleitung](https://docs.flutter.dev/get-started/install))
-- **Xcode** ≥ 16.0 (für iOS)
-- **Android Studio** (für Android)
-- **CocoaPods** ≥ 1.16.0
+| Tool | Version | Hinweis |
+|------|---------|---------|
+| **Flutter SDK** | ≥ 3.29.0 | [Installationsanleitung](https://docs.flutter.dev/get-started/install) |
+| **Dart SDK** | ≥ 3.2.0 | Wird mit Flutter installiert |
+| **Xcode** | ≥ 16.0 | Nur für iOS-Entwicklung |
+| **CocoaPods** | ≥ 1.16.0 | Nur für iOS-Entwicklung |
+| **Android Studio** | Aktuell | Nur für Android-Entwicklung |
 
 ### Projekt einrichten
 
@@ -48,12 +50,50 @@ cd FormWerk
 # 2. Abhängigkeiten installieren
 flutter pub get
 
-# 3. iOS Pods installieren
+# 3. iOS Pods installieren (nur macOS)
 cd ios && pod install && cd ..
 
 # 4. App starten
 flutter run
 ```
+
+---
+
+## 🍎 In Xcode öffnen
+
+> **Hinweis:** GitHub unterstützt den „Open with Xcode"-Button **nur** für native iOS-Projekte. Bei Flutter-Projekten funktioniert dieser Button nicht.
+
+So öffnest du FormWerk in Xcode:
+
+### Methode 1: Über das Terminal (Empfohlen)
+
+```bash
+cd FormWerk
+open ios/Runner.xcworkspace
+```
+
+### Methode 2: Über Flutter
+
+```bash
+flutter build ios --no-codesign   # Projekt vorbereiten
+open ios/Runner.xcworkspace       # In Xcode öffnen
+```
+
+### Methode 3: Manuell in Xcode
+
+1. Xcode öffnen
+2. **File → Open**
+3. Zum Ordner `FormWerk/ios/` navigieren
+4. `Runner.xcworkspace` auswählen ⚠️ **nicht** `.xcodeproj`
+
+> **Wichtig:** Immer die `.xcworkspace`-Datei öffnen, da sie die CocoaPods-Integration enthält.
+
+### Auf dem iPhone ausführen (über Xcode)
+
+1. iPhone per USB oder WLAN mit dem Mac verbinden
+2. In Xcode das Team unter **Signing & Capabilities** auswählen
+3. Bundle Identifier ggf. anpassen (`de.gewichtskompass.app`)
+4. Gerät auswählen und **▶ Run** drücken
 
 ---
 
@@ -63,9 +103,8 @@ flutter run
 lib/
 ├── main.dart                    # App-Einstiegspunkt
 ├── config/
-│   ├── firebase/                # Firebase-Konfiguration
 │   ├── localization/            # Internationalisierung (DE, AR)
-│   ├── router/                  # Navigation & Routing
+│   ├── router/                  # Navigation & Routing (GoRouter)
 │   └── theme/                   # Design-System (Colors, Typography, Spacing)
 ├── core/
 │   ├── constants/               # App-Konstanten
@@ -108,35 +147,6 @@ lib/
 
 ---
 
-## 🍎 In Xcode öffnen
-
-Da FormWerk ein Flutter-Projekt ist, wird der „Open with Xcode"-Button auf GitHub **nicht** unterstützt. So öffnest du das Projekt in Xcode:
-
-### Methode 1: Über das Terminal (Empfohlen)
-
-```bash
-cd FormWerk
-open ios/Runner.xcworkspace
-```
-
-### Methode 2: Über Flutter
-
-```bash
-flutter build ios --no-codesign   # Projekt vorbereiten
-open ios/Runner.xcworkspace       # In Xcode öffnen
-```
-
-### Methode 3: Manuell in Xcode
-
-1. Xcode öffnen
-2. **File → Open**
-3. Zum Ordner `FormWerk/ios/` navigieren
-4. `Runner.xcworkspace` auswählen (⚠️ **nicht** `.xcodeproj`)
-
-> **Wichtig:** Immer die `.xcworkspace`-Datei öffnen, da sie die CocoaPods-Integration enthält.
-
----
-
 ## 🌍 Internationalisierung
 
 FormWerk unterstützt mehrere Sprachen:
@@ -154,14 +164,13 @@ Neue Übersetzungen in `lib/l10n/app_XX.arb` hinzufügen.
 
 | Kategorie | Technologie |
 |-----------|-------------|
-| **Framework** | Flutter 3.29+ |
-| **Sprache** | Dart 3.7+ |
-| **State Management** | Provider / Riverpod |
-| **Backend** | Firebase (Auth, Firestore, Analytics, Crashlytics, Messaging) |
+| **Framework** | Flutter 3.41+ |
+| **Sprache** | Dart 3.2+ |
+| **State Management** | Riverpod |
+| **Navigation** | GoRouter |
 | **Lokale DB** | Sqflite |
 | **Architektur** | Clean Architecture (Domain → Data → Presentation) |
 | **Design** | Material 3, Custom Design System |
-| **CI/CD** | GitHub Actions (geplant) |
 
 ---
 
@@ -179,6 +188,29 @@ flutter build ios --no-codesign
 flutter build apk --release
 # oder
 flutter build appbundle --release
+```
+
+---
+
+## ❓ Häufige Probleme
+
+### „No provider was found" beim iOS-Deploy
+
+Stelle sicher, dass:
+- Das iPhone per USB verbunden ist (WLAN-Debugging kann instabil sein)
+- In Xcode ein Signing-Team ausgewählt ist
+- Der Bundle Identifier eindeutig ist
+
+### „CocoaPods could not find compatible versions"
+
+```bash
+cd ios && pod repo update && pod install && cd ..
+```
+
+### Flutter-Version prüfen
+
+```bash
+flutter doctor
 ```
 
 ---

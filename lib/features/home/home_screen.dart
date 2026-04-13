@@ -237,7 +237,7 @@ class HomeScreen extends ConsumerWidget {
                             strokeWidth: 5,
                             color: AppColors.info,
                             child: Text(
-                              '${(stats.waterConsumed / 1000).toStringAsFixed(1)}',
+                              (stats.waterConsumed / 1000).toStringAsFixed(1),
                               style: AppTypography.bodySmall.copyWith(fontWeight: FontWeight.w700),
                             ),
                           ),

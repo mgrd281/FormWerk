@@ -14,7 +14,7 @@ class AddWeightScreen extends StatefulWidget {
 
 class _AddWeightScreenState extends State<AddWeightScreen> {
   final _weightController = TextEditingController();
-  DateTime _selectedDate = DateTime.now();
+  final DateTime _selectedDate = DateTime.now();
   String _note = '';
 
   @override

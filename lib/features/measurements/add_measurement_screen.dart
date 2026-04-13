@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../config/theme/app_colors.dart';
-import '../../config/theme/app_typography.dart';
 import '../../config/theme/app_spacing.dart';
 import '../../config/localization/app_localizations.dart';
 import '../../core/widgets/app_widgets.dart';

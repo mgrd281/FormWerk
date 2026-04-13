@@ -41,8 +41,9 @@ GoRouter createAppRouter(String initialLocation) {
       builder: (context, state, child) {
         final String location = state.uri.path;
         int currentIndex = 0;
-        if (location.startsWith('/progress')) currentIndex = 1;
-        else if (location.startsWith('/log')) currentIndex = 2;
+        if (location.startsWith('/progress')) {
+          currentIndex = 1;
+        } else if (location.startsWith('/log')) currentIndex = 2;
         else if (location.startsWith('/habits')) currentIndex = 3;
         else if (location.startsWith('/profile')) currentIndex = 4;
 

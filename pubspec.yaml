@@ -19,18 +19,19 @@ dependencies:
   # Routing
   go_router: ^17.2.0
 
-  # Firebase
-  firebase_core: ^4.0.0
-  firebase_auth: ^6.0.0
-  cloud_firestore: ^6.0.0
-  firebase_analytics: ^12.0.0
-  firebase_crashlytics: ^5.0.0
-  firebase_messaging: ^16.0.0
+  # Firebase - Disabled until real credentials are configured
+  # To enable: uncomment these, add GoogleService-Info.plist, and configure Firebase
+  # firebase_core: ^4.0.0
+  # firebase_auth: ^6.0.0
+  # cloud_firestore: ^6.0.0
+  # firebase_analytics: ^12.0.0
+  # firebase_crashlytics: ^5.0.0
+  # firebase_messaging: ^16.0.0
 
-  # Auth Providers
-  google_sign_in: ^7.2.0
-  sign_in_with_apple: ^7.0.1
-  crypto: ^3.0.3
+  # Auth Providers - Disabled (requires Firebase)
+  # google_sign_in: ^7.2.0
+  # sign_in_with_apple: ^7.0.1
+  # crypto: ^3.0.3
 
   # Local Storage
   hive: ^2.2.3
@@ -83,9 +84,4 @@ flutter:
   uses-material-design: true
   generate: true
 
-  assets:
-    - assets/images/
-    - assets/icons/
-    - assets/animations/
-    - assets/l10n/
 

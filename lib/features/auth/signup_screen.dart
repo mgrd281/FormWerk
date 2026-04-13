@@ -98,7 +98,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     onPressed: () => context.go('/login'),
                     child: RichText(
                       text: TextSpan(
-                        text: l10n.hasAccount + ' ',
+                        text: '${l10n.hasAccount} ',
                         style: AppTypography.bodyMedium.copyWith(
                           color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
                         ),
