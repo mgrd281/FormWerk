@@ -1,16 +1,24 @@
+<div align="center">
+
 # 🏋️ FormWerk
 
-> **Dein intelligenter Begleiter für Gesundheit, Fitness & Gewichtsmanagement**
+**Dein intelligenter Begleiter für Gesundheit, Fitness & Gewichtsmanagement**
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.41-02569B?logo=flutter)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-3.2+-0175C2?logo=dart)](https://dart.dev)
 [![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-green)](https://github.com/mgrd281/FormWerk)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+[![Xcode](https://img.shields.io/badge/Xcode-16+-147EFB?logo=xcode)](https://developer.apple.com/xcode/)
+
+[🇩🇪 Deutsch](#-über-formwerk) · [🇸🇦 العربية](#-الدعم-العربي) · [🚀 Schnellstart](#-schnellstart) · [🍎 Xcode](#-in-xcode-öffnen) · [❓ FAQ](#-häufige-probleme)
+
+</div>
 
 ---
 
 ## 📱 Über FormWerk
 
-FormWerk ist eine Premium-Flutter-App für ganzheitliches Gesundheitsmanagement. Sie verbindet Gewichtsverfolgung, Ernährungsplanung, Trainingsprotokollierung und Habit-Tracking in einer eleganten, intuitiven Oberfläche.
+FormWerk ist eine Premium-Flutter-App für ganzheitliches Gesundheitsmanagement. Sie verbindet Gewichtsverfolgung, Ernährungsplanung, Trainingsprotokollierung und Habit-Tracking in einer eleganten, intuitiven Oberfläche – mit vollständiger **Deutsch-** und **Arabisch-Unterstützung**.
 
 ### ✨ Hauptfunktionen
 
@@ -57,13 +65,26 @@ cd ios && pod install && cd ..
 flutter run
 ```
 
+### Auf dem iPhone starten
+
+```bash
+# Verbundene Geräte anzeigen
+flutter devices
+
+# Auf einem bestimmten Gerät starten
+flutter run -d <device-id>
+
+# Release-Modus (empfohlen für Tests)
+flutter run -d <device-id> --release
+```
+
 ---
 
 ## 🍎 In Xcode öffnen
 
-> **Hinweis:** GitHub unterstützt den „Open with Xcode"-Button **nur** für native iOS-Projekte. Bei Flutter-Projekten funktioniert dieser Button nicht.
+> ⚠️ **Wichtig:** GitHub zeigt den „Open with Xcode"-Button **nur** bei nativen iOS-Projekten an. Bei Flutter-Projekten funktioniert dieser Button nicht – das ist normal.
 
-So öffnest du FormWerk in Xcode:
+So öffnest du FormWerk korrekt in Xcode:
 
 ### Methode 1: Über das Terminal (Empfohlen)
 
@@ -84,7 +105,7 @@ open ios/Runner.xcworkspace       # In Xcode öffnen
 1. Xcode öffnen
 2. **File → Open**
 3. Zum Ordner `FormWerk/ios/` navigieren
-4. `Runner.xcworkspace` auswählen ⚠️ **nicht** `.xcodeproj`
+4. **`Runner.xcworkspace`** auswählen ⚠️ **nicht** `.xcodeproj`
 
 > **Wichtig:** Immer die `.xcworkspace`-Datei öffnen, da sie die CocoaPods-Integration enthält.
 
@@ -93,7 +114,7 @@ open ios/Runner.xcworkspace       # In Xcode öffnen
 1. iPhone per USB oder WLAN mit dem Mac verbinden
 2. In Xcode das Team unter **Signing & Capabilities** auswählen
 3. Bundle Identifier ggf. anpassen (`de.gewichtskompass.app`)
-4. Gerät auswählen und **▶ Run** drücken
+4. Gerät auswählen und **▶ Run** drücken (⌘R)
 
 ---
 
@@ -103,6 +124,7 @@ open ios/Runner.xcworkspace       # In Xcode öffnen
 lib/
 ├── main.dart                    # App-Einstiegspunkt
 ├── config/
+│   ├── firebase/                # Firebase-Konfiguration
 │   ├── localization/            # Internationalisierung (DE, AR)
 │   ├── router/                  # Navigation & Routing (GoRouter)
 │   └── theme/                   # Design-System (Colors, Typography, Spacing)
@@ -139,7 +161,7 @@ lib/
 │   ├── log/                     # Aktivitätsprotokoll
 │   ├── profile/                 # Benutzerprofil
 │   ├── settings/                # Einstellungen
-│   └── static/                  # Statische Seiten
+│   └── static/                  # Statische Seiten (Impressum, Datenschutz)
 └── l10n/
     ├── app_de.arb               # Deutsche Übersetzung
     └── app_ar.arb               # Arabische Übersetzung
@@ -154,9 +176,15 @@ FormWerk unterstützt mehrere Sprachen:
 | Sprache | Code | Status |
 |---------|------|--------|
 | 🇩🇪 Deutsch | `de` | ✅ Vollständig |
-| 🇸🇦 العربيّة | `ar` | ✅ Vollständig |
+| 🇸🇦 العربية | `ar` | ✅ Vollständig (RTL) |
 
 Neue Übersetzungen in `lib/l10n/app_XX.arb` hinzufügen.
+
+### 🇸🇦 الدعم العربي
+
+يدعم التطبيق اللغة العربية بالكامل مع واجهة من اليمين لليسار (RTL). لتغيير اللغة:
+- في الإعدادات: Sprache → العربية
+- أو عبر Provider: `localeProvider`
 
 ---
 
@@ -171,6 +199,7 @@ Neue Übersetzungen in `lib/l10n/app_XX.arb` hinzufügen.
 | **Lokale DB** | Sqflite |
 | **Architektur** | Clean Architecture (Domain → Data → Presentation) |
 | **Design** | Material 3, Custom Design System |
+| **Backend** | Firebase (Auth, Firestore, Analytics) |
 
 ---
 
@@ -190,6 +219,14 @@ flutter build apk --release
 flutter build appbundle --release
 ```
 
+### Build bereinigen
+
+```bash
+flutter clean
+flutter pub get
+cd ios && pod install && cd ..
+```
+
 ---
 
 ## ❓ Häufige Probleme
@@ -201,6 +238,14 @@ Stelle sicher, dass:
 - In Xcode ein Signing-Team ausgewählt ist
 - Der Bundle Identifier eindeutig ist
 
+### App stürzt mit SIGKILL ab (Debug-Modus)
+
+Wenn die App im Debug-Modus mit `SIGKILL` beendet wird:
+1. Alte Version auf dem iPhone löschen (lange tippen → App entfernen)
+2. Projekt bereinigen: `flutter clean && flutter pub get`
+3. Neu installieren: `flutter run --release`
+4. Alternativ: In Xcode **Product → Clean Build Folder** (⇧⌘K) und neu starten
+
 ### „CocoaPods could not find compatible versions"
 
 ```bash
@@ -210,8 +255,14 @@ cd ios && pod repo update && pod install && cd ..
 ### Flutter-Version prüfen
 
 ```bash
-flutter doctor
+flutter doctor -v
 ```
+
+### „Xcode is taking longer than expected"
+
+- Xcode komplett schließen
+- `pkill -9 -f flutter && pkill -9 -f dart`
+- Neu starten: `flutter run --release`
 
 ---
 
