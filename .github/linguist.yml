@@ -1,13 +1,13 @@
-# Override language detection for GitHub
-# This helps enable the "Open with Xcode" button
+# Override GitHub Linguist to enable "Open with Xcode" button
+# Strategy: Demote Dart, Promote Swift/Objective-C
 
+# Define languages
 languages:
   - name: Swift
     color: "#F05138"
     extensions:
       - ".swift"
     linguist_language_id: 448
-
   - name: Objective-C
     color: "#438EFF"
     extensions:
@@ -15,14 +15,24 @@ languages:
       - ".m"
     linguist_language_id: 42
 
-# Ensure iOS folder is not treated as generated/vendored code
+# CRITICAL OVERRIDES:
+# 1. Treat iOS folder as PRIMARY source code (not generated)
+# 2. Demote lib/ (Dart) to reduce its dominance in language stats
 overrides:
+  # iOS = Native code - NEVER treat as generated
   "ios/**":
     linguist-generated: false
     linguist-vendored: false
+    linguist-documentation: false
   "ios/**/*.swift":
     linguist-language: Swift
   "ios/**/*.h":
     linguist-language: Objective-C
   "ios/**/*.m":
     linguist-language: Objective-C
+  
+  # Mark most Dart/Flutter files as documentation to reduce their weight
+  "lib/**/*.dart":
+    linguist-documentation: true
+  "test/**/*.dart":
+    linguist-generated: true

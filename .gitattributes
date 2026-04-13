@@ -1,10 +1,36 @@
-# Help GitHub detect this as an iOS/Swift project
-# This enables the "Open with Xcode" button
+# Force GitHub to detect this as an iOS/Xcode project
+# This enables the "Open with Xcode" green button
 
+# Mark ALL source files with their correct languages
 *.swift linguist-language=Swift
 *.h linguist-language=Objective-C
 *.m linguist-language=Objective-C
+*.dart linguist-language=Dart
+*.yaml linguist-language=YAML
+*.json linguist-language=JSON
+*.arb linguist-language=JSON
+
+# CRITICAL: Do NOT treat iOS folder as generated or vendored
+# This is what prevents the "Open with Xcode" button from showing
 ios/** linguist-generated=false
+ios/** linguist-vendored=false
+ios/** linguist-documentation=false
 ios/**/*.swift linguist-language=Swift
 ios/**/*.h linguist-language=Objective-C
 ios/**/*.m linguist-language=Objective-C
+ios/**/*.plist linguist-language=XML
+ios/**/*.storyboard linguist-language=XML
+ios/**/*.xib linguist-language=XML
+ios/**/*.pbxproj linguist-language=Text
+ios/**/*.xcworkspacedata linguist-language=XML
+ios/**/*.entitlements linguist-language=XML
+ios/**/*.strings linguist-language=Text
+
+# Ensure Podfile is recognized as Ruby
+Podfile linguist-language=Ruby
+Podfile.lock linguist-ignore=true
+
+# Hide generated Flutter files from language stats
+.flutter-plugins linguist-generated=true
+.flutter-plugins-dependencies linguist-generated=true
+pubspec.lock linguist-generated=true
