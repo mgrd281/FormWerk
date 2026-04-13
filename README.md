@@ -1,14 +1,20 @@
 <div align="center">
 
-# 🏋️ FormWerk
+<br />
+
+<h1>🏋️ FormWerk</h1>
 
 **Dein intelligenter Begleiter für Gesundheit, Fitness & Gewichtsmanagement**
 
-[![Flutter](https://img.shields.io/badge/Flutter-3.41-02569B?logo=flutter)](https://flutter.dev)
-[![Dart](https://img.shields.io/badge/Dart-3.2+-0175C2?logo=dart)](https://dart.dev)
-[![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-green)](https://github.com/mgrd281/FormWerk)
-[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
-[![Xcode](https://img.shields.io/badge/Xcode-16+-147EFB?logo=xcode)](https://developer.apple.com/xcode/)
+<br />
+
+[![Flutter](https://img.shields.io/badge/Flutter-3.29+-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-3.2+-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
+[![iOS](https://img.shields.io/badge/iOS-16+-000000?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/ios/)
+[![Android](https://img.shields.io/badge/Android-7+-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com)
+[![License](https://img.shields.io/badge/License-MIT-6E40C9?style=for-the-badge)](LICENSE)
+
+<br />
 
 [🇩🇪 Deutsch](#-über-formwerk) · [🇸🇦 العربية](#-الدعم-العربي) · [🚀 Schnellstart](#-schnellstart) · [🍎 Xcode](#-in-xcode-öffnen) · [❓ FAQ](#-häufige-probleme)
 
@@ -22,17 +28,25 @@ FormWerk ist eine Premium-Flutter-App für ganzheitliches Gesundheitsmanagement.
 
 ### ✨ Hauptfunktionen
 
-| Bereich | Features |
-|---------|----------|
-| 🏠 **Dashboard** | Tagesübersicht, Fortschritt, Schnellzugriff |
-| ⚖️ **Gewicht** | Gewichtsverfolgung, BMI-Berechnung, Verlauf |
-| 📏 **Messungen** | Körpermaße dokumentieren & vergleichen |
-| 🍽️ **Ernährung** | Mahlzeiten erfassen, Kalorien & Makros |
-| 💧 **Wasser** | Tägliche Trinkmenge im Blick behalten |
-| 🏃 **Training** | Workouts protokollieren, Dauer & Intensität |
-| ✅ **Gewohnheiten** | Tägliche Habits tracken, Streaks aufbauen |
-| 📊 **Analyse** | Smarte Insights, Trends & Statistiken |
-| 👤 **Profil** | Persönliche Daten, Ziele & Einstellungen |
+| Bereich | Features | |
+|---------|----------|-|
+| 🏠 **Dashboard** | Tagesübersicht mit Fortschrittsring, BMI-Skala, Kalorien- & Wasser-Tracker | `Premium UI` |
+| ⚖️ **Gewicht** | Gewichtsverfolgung mit Verlauf, BMI-Berechnung & Zielgewicht | `Kernfunktion` |
+| 📏 **Messungen** | Körpermaße dokumentieren & vergleichen (Taille, Brust, etc.) | `Tracking` |
+| 🍽️ **Ernährung** | Mahlzeiten erfassen, Kalorien & Makronährstoffe tracken | `Tracking` |
+| 💧 **Wasser** | Tägliche Trinkmenge mit Zielfortschritt im Blick behalten | `Tracking` |
+| 🏃 **Training** | Workouts protokollieren – Dauer, Intensität & Kalorienverbrauch | `Tracking` |
+| ✅ **Gewohnheiten** | Tägliche Habits tracken, Streaks aufbauen & motiviert bleiben | `Motivation` |
+| 📊 **Analyse** | Smarte Insights, Trends & Statistiken auf einen Blick | `Insights` |
+| 👤 **Profil** | Persönliche Daten, Ziele & Einstellungen verwalten | `Einstellungen` |
+
+### 🎨 Design-Highlights
+
+- **Material 3** Design System mit Custom Color Palette
+- **Dark & Light Mode** vollständig unterstützt
+- **RTL-Support** für Arabisch (Right-to-Left)
+- **Premium Cards** mit Schatten, Gradients & abgerundeten Ecken
+- **Animationen** für flüssige Übergänge & Interaktionen
 
 ---
 
@@ -44,7 +58,7 @@ FormWerk ist eine Premium-Flutter-App für ganzheitliches Gesundheitsmanagement.
 |------|---------|---------|
 | **Flutter SDK** | ≥ 3.29.0 | [Installationsanleitung](https://docs.flutter.dev/get-started/install) |
 | **Dart SDK** | ≥ 3.2.0 | Wird mit Flutter installiert |
-| **Xcode** | ≥ 16.0 | Nur für iOS-Entwicklung |
+| **Xcode** | ≥ 16.0 | Nur für iOS-Entwicklung (macOS) |
 | **CocoaPods** | ≥ 1.16.0 | Nur für iOS-Entwicklung |
 | **Android Studio** | Aktuell | Nur für Android-Entwicklung |
 
@@ -74,7 +88,7 @@ flutter devices
 # Auf einem bestimmten Gerät starten
 flutter run -d <device-id>
 
-# Release-Modus (empfohlen für Tests)
+# Release-Modus (empfohlen für Performance-Tests)
 flutter run -d <device-id> --release
 ```
 
@@ -82,11 +96,11 @@ flutter run -d <device-id> --release
 
 ## 🍎 In Xcode öffnen
 
-> ⚠️ **Wichtig:** GitHub zeigt den „Open with Xcode"-Button **nur** bei nativen iOS-Projekten an. Bei Flutter-Projekten funktioniert dieser Button nicht – das ist normal.
+> ⚠️ **Wichtig:** GitHub zeigt den „Open with Xcode"-Button **nur** bei nativen iOS-Projekten an. Bei Flutter-Projekten funktioniert dieser Button nicht – das ist ein GitHub-Limit, kein Fehler im Projekt.
 
 So öffnest du FormWerk korrekt in Xcode:
 
-### Methode 1: Über das Terminal (Empfohlen)
+### Methode 1: Über das Terminal (Empfohlen ✅)
 
 ```bash
 cd FormWerk
@@ -103,7 +117,7 @@ open ios/Runner.xcworkspace       # In Xcode öffnen
 ### Methode 3: Manuell in Xcode
 
 1. Xcode öffnen
-2. **File → Open**
+2. **File → Open** (⌘O)
 3. Zum Ordner `FormWerk/ios/` navigieren
 4. **`Runner.xcworkspace`** auswählen ⚠️ **nicht** `.xcodeproj`
 
@@ -122,46 +136,46 @@ open ios/Runner.xcworkspace       # In Xcode öffnen
 
 ```
 lib/
-├── main.dart                    # App-Einstiegspunkt
+├── main.dart                    # App-Einstiegspunkt (GewichtsKompassApp)
 ├── config/
-│   ├── firebase/                # Firebase-Konfiguration
+│   ├── firebase/                # Firebase-Konfiguration (Placeholder)
 │   ├── localization/            # Internationalisierung (DE, AR)
-│   ├── router/                  # Navigation & Routing (GoRouter)
+│   ├── router/                  # Navigation & Routing (GoRouter + ShellRoute)
 │   └── theme/                   # Design-System (Colors, Typography, Spacing)
 ├── core/
 │   ├── constants/               # App-Konstanten
 │   ├── errors/                  # Fehlerbehandlung
 │   ├── extensions/              # Dart-Erweiterungen
 │   ├── network/                 # Netzwerk-Utilities
-│   ├── providers/               # State-Management Provider
+│   ├── providers/               # Riverpod State-Management Provider
 │   ├── utils/                   # Hilfsfunktionen
 │   └── widgets/                 # Wiederverwendbare Widgets
 ├── data/
-│   ├── datasources/             # Datenquellen
+│   ├── datasources/             # Datenquellen (lokal/remote)
 │   ├── mappers/                 # DTO-Mapper
 │   ├── models/                  # Datenmodelle
 │   └── repositories/            # Repository-Implementierungen
 ├── domain/
-│   ├── entities/                # Domänen-Entitäten
+│   ├── entities/                # Domänen-Entitäten (Equatable)
 │   ├── repositories/            # Repository-Interfaces
-│   └── usecases/                # Geschäftslogik
+│   └── usecases/                # Geschäftslogik (BMI, Kalorien, etc.)
 ├── features/
 │   ├── splash/                  # Startbildschirm
 │   ├── onboarding/              # Einführung
 │   ├── auth/                    # Anmeldung & Registrierung
-│   ├── home/                    # Hauptbildschirm
+│   ├── home/                    # Dashboard mit Fortschrittsringen
 │   ├── weight/                  # Gewichtsverfolgung
 │   ├── measurements/            # Körpermaße
-│   ├── meals/                   # Ernährung
+│   ├── meals/                   # Ernährung & Kalorien
 │   ├── water/                   # Wasser-Tracking
 │   ├── workout/                 # Training
-│   ├── habits/                  # Gewohnheiten
+│   ├── habits/                  # Gewohnheiten & Streaks
 │   ├── analytics/               # Analyse & Insights
-│   ├── progress/                # Fortschritt
+│   ├── progress/                # Fortschrittsdiagramme
 │   ├── log/                     # Aktivitätsprotokoll
 │   ├── profile/                 # Benutzerprofil
-│   ├── settings/                # Einstellungen
-│   └── static/                  # Statische Seiten (Impressum, Datenschutz)
+│   ├── settings/                # Einstellungen (Sprache, Theme, etc.)
+│   └── static/                  # Impressum, Datenschutz, AGB
 └── l10n/
     ├── app_de.arb               # Deutsche Übersetzung
     └── app_ar.arb               # Arabische Übersetzung
@@ -171,12 +185,12 @@ lib/
 
 ## 🌍 Internationalisierung
 
-FormWerk unterstützt mehrere Sprachen:
+FormWerk unterstützt mehrere Sprachen mit vollständiger Lokalisierung:
 
-| Sprache | Code | Status |
-|---------|------|--------|
-| 🇩🇪 Deutsch | `de` | ✅ Vollständig |
-| 🇸🇦 العربية | `ar` | ✅ Vollständig (RTL) |
+| Sprache | Code | Status | Richtung |
+|---------|------|--------|----------|
+| 🇩🇪 Deutsch | `de` | ✅ Vollständig | LTR |
+| 🇸🇦 العربية | `ar` | ✅ Vollständig | RTL |
 
 Neue Übersetzungen in `lib/l10n/app_XX.arb` hinzufügen.
 
@@ -190,16 +204,26 @@ Neue Übersetzungen in `lib/l10n/app_XX.arb` hinzufügen.
 
 ## 🛠️ Technologie-Stack
 
-| Kategorie | Technologie |
-|-----------|-------------|
-| **Framework** | Flutter 3.41+ |
-| **Sprache** | Dart 3.2+ |
-| **State Management** | Riverpod |
-| **Navigation** | GoRouter |
-| **Lokale DB** | Sqflite |
-| **Architektur** | Clean Architecture (Domain → Data → Presentation) |
-| **Design** | Material 3, Custom Design System |
-| **Backend** | Firebase (Auth, Firestore, Analytics) |
+| Kategorie | Technologie | Hinweis |
+|-----------|-------------|---------|
+| **Framework** | Flutter 3.29+ | Cross-Platform |
+| **Sprache** | Dart 3.2+ | Null-Safety |
+| **State Management** | Riverpod | flutter_riverpod + riverpod_annotation |
+| **Navigation** | GoRouter | ShellRoute mit BottomNav |
+| **Lokale DB** | Hive | Lokale Datenspeicherung |
+| **Charts** | FL Chart | Fortschrittsdiagramme |
+| **Architektur** | Clean Architecture | Domain → Data → Presentation |
+| **Design** | Material 3 | Custom Design System |
+| **Backend** | Firebase *(optional)* | Aktuell deaktiviert – kann aktiviert werden |
+
+### Firebase aktivieren
+
+Firebase ist aktuell deaktiviert. So aktivierst du es:
+
+1. In `pubspec.yaml` die Firebase-Pakete entkommentieren
+2. `flutterfire configure` ausführen
+3. `GoogleService-Info.plist` in `ios/Runner/` ablegen
+4. `flutter pub get` und `cd ios && pod install`
 
 ---
 
@@ -215,7 +239,7 @@ flutter build ios --no-codesign
 
 ```bash
 flutter build apk --release
-# oder
+# oder für Play Store:
 flutter build appbundle --release
 ```
 
@@ -241,8 +265,12 @@ Stelle sicher, dass:
 ### App stürzt mit SIGKILL ab (Debug-Modus)
 
 Wenn die App im Debug-Modus mit `SIGKILL` beendet wird:
+
 1. Alte Version auf dem iPhone löschen (lange tippen → App entfernen)
-2. Projekt bereinigen: `flutter clean && flutter pub get`
+2. Projekt bereinigen:
+   ```bash
+   flutter clean && flutter pub get && cd ios && pod install && cd ..
+   ```
 3. Neu installieren: `flutter run --release`
 4. Alternativ: In Xcode **Product → Clean Build Folder** (⇧⌘K) und neu starten
 
@@ -252,21 +280,27 @@ Wenn die App im Debug-Modus mit `SIGKILL` beendet wird:
 cd ios && pod repo update && pod install && cd ..
 ```
 
+### „Xcode is taking longer than expected"
+
+```bash
+# Alle Flutter-Prozesse beenden
+pkill -9 -f flutter && pkill -9 -f dart
+
+# Neu starten
+flutter run --release
+```
+
 ### Flutter-Version prüfen
 
 ```bash
 flutter doctor -v
 ```
 
-### „Xcode is taking longer than expected"
-
-- Xcode komplett schließen
-- `pkill -9 -f flutter && pkill -9 -f dart`
-- Neu starten: `flutter run --release`
-
 ---
 
 ## 🤝 Mitwirken
+
+Beiträge sind willkommen! So kannst du helfen:
 
 1. Repository forken
 2. Feature-Branch erstellen (`git checkout -b feature/amazing-feature`)
@@ -282,14 +316,14 @@ Dieses Projekt steht unter der MIT-Lizenz. Siehe [LICENSE](LICENSE) für Details
 
 ---
 
-## 👨‍💻 Autor
-
-**mgrd281** – [GitHub](https://github.com/mgrd281)
-
----
-
 <div align="center">
 
+<br />
+
 **FormWerk** – Dein Körper, dein Kompass. 🧭
+
+<br />
+
+[⬆ Nach oben](#️-formwerk)
 
 </div>

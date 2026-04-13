@@ -11,7 +11,6 @@ class HabitsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    final theme = Theme.of(context);
     final habits = [
       _HabitData(Icons.water_drop, l10n.habitWater, true, 7),
       _HabitData(Icons.directions_walk, l10n.habitWalk, true, 5),

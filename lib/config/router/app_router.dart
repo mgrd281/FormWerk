@@ -43,9 +43,9 @@ GoRouter createAppRouter(String initialLocation) {
         int currentIndex = 0;
         if (location.startsWith('/progress')) {
           currentIndex = 1;
-        } else if (location.startsWith('/log')) currentIndex = 2;
-        else if (location.startsWith('/habits')) currentIndex = 3;
-        else if (location.startsWith('/profile')) currentIndex = 4;
+        } else if (location.startsWith('/log')) { currentIndex = 2; }
+        else if (location.startsWith('/habits')) { currentIndex = 3; }
+        else if (location.startsWith('/profile')) { currentIndex = 4; }
 
         return Scaffold(
           body: child,

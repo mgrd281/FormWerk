@@ -47,8 +47,8 @@ class _AddWaterScreenState extends State<AddWaterScreen> {
           ),
           const SizedBox(height: AppSpacing.lg),
           Wrap(spacing: AppSpacing.sm, runSpacing: AppSpacing.sm, children: [
-            _QuickAmount('100 ml', 100), _QuickAmount('250 ml', 250),
-            _QuickAmount('500 ml', 500), _QuickAmount('750 ml', 750),
+            _quickAmount('100 ml', 100), _quickAmount('250 ml', 250),
+            _quickAmount('500 ml', 500), _quickAmount('750 ml', 750),
           ]),
           const Spacer(),
           PremiumButton(label: l10n.save, icon: Icons.check, onPressed: () => context.pop()),
@@ -57,7 +57,7 @@ class _AddWaterScreenState extends State<AddWaterScreen> {
     );
   }
 
-  Widget _QuickAmount(String label, double value) {
+  Widget _quickAmount(String label, double value) {
     final selected = _amount == value;
     return GestureDetector(
       onTap: () => setState(() => _amount = value),

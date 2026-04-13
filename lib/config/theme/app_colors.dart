@@ -1,108 +1,125 @@
 import 'package:flutter/material.dart';
 
-/// Premium color palette for GewichtsKompass
-/// Inspired by calm wellness aesthetics with sophisticated accent tones
+/// Premium color palette for Gewichtskompass
+/// Inspired by Apple Health, MyFitnessPal – vibrant, modern, wellness-focused
 class AppColors {
   AppColors._();
 
-  // ─── Primary Palette ────────────────────────────────────────
-  static const Color primary = Color(0xFF2D6A4F);
-  static const Color primaryLight = Color(0xFF40916C);
-  static const Color primaryDark = Color(0xFF1B4332);
-  static const Color primarySurface = Color(0xFFD8F3DC);
+  // ─── Primary Palette (Vibrant Teal-Green) ──────────────────────
+  static const Color primary = Color(0xFF00B894);
+  static const Color primaryLight = Color(0xFF55EFC4);
+  static const Color primaryDark = Color(0xFF00A381);
+  static const Color primarySurface = Color(0xFFE8FFF6);
 
-  // ─── Accent Palette ─────────────────────────────────────────
-  static const Color accent = Color(0xFFE76F51);
-  static const Color accentLight = Color(0xFFF4A261);
-  static const Color accentSurface = Color(0xFFFDEBD0);
+  // ─── Accent Palette (Warm Coral) ───────────────────────────────
+  static const Color accent = Color(0xFFFF6B6B);
+  static const Color accentLight = Color(0xFFFF8E8E);
+  static const Color accentSurface = Color(0xFFFFECEC);
 
-  // ─── Semantic Colors ────────────────────────────────────────
-  static const Color success = Color(0xFF40916C);
-  static const Color successLight = Color(0xFFD8F3DC);
-  static const Color warning = Color(0xFFF4A261);
-  static const Color warningLight = Color(0xFFFDEBD0);
-  static const Color error = Color(0xFFE63946);
-  static const Color errorLight = Color(0xFFFDE8E8);
-  static const Color info = Color(0xFF457B9D);
-  static const Color infoLight = Color(0xFFE3EEF5);
+  // ─── Secondary Accent (Amber) ──────────────────────────────────
+  static const Color secondary = Color(0xFFFDCB6E);
+  static const Color secondarySurface = Color(0xFFFEF3D0);
 
-  // ─── Neutral Palette (Light Theme) ──────────────────────────
-  static const Color background = Color(0xFFFAFBFC);
+  // ─── Semantic Colors ───────────────────────────────────────────
+  static const Color success = Color(0xFF00B894);
+  static const Color successLight = Color(0xFFE8FFF6);
+  static const Color warning = Color(0xFFFDCB6E);
+  static const Color warningLight = Color(0xFFFEF3D0);
+  static const Color error = Color(0xFFFF6B6B);
+  static const Color errorLight = Color(0xFFFFECEC);
+  static const Color info = Color(0xFF74B9FF);
+  static const Color infoLight = Color(0xFFEBF5FF);
+
+  // ─── Neutral Palette (Light Theme) ─────────────────────────────
+  static const Color background = Color(0xFFF8FAFB);
   static const Color surface = Color(0xFFFFFFFF);
-  static const Color surfaceVariant = Color(0xFFF5F6F8);
+  static const Color surfaceVariant = Color(0xFFF1F3F5);
   static const Color cardBackground = Color(0xFFFFFFFF);
   static const Color cardBorder = Color(0xFFEEF0F2);
 
-  static const Color textPrimary = Color(0xFF1A1D21);
-  static const Color textSecondary = Color(0xFF5F6B7A);
-  static const Color textTertiary = Color(0xFF9AA5B4);
-  static const Color textDisabled = Color(0xFFC4CBD5);
+  static const Color textPrimary = Color(0xFF1A1D26);
+  static const Color textSecondary = Color(0xFF6B7280);
+  static const Color textTertiary = Color(0xFF9CA3AF);
+  static const Color textDisabled = Color(0xFFD1D5DB);
   static const Color textOnPrimary = Color(0xFFFFFFFF);
 
-  static const Color divider = Color(0xFFEEF0F2);
-  static const Color outline = Color(0xFFD8DCE2);
+  static const Color divider = Color(0xFFF1F3F5);
+  static const Color outline = Color(0xFFE5E7EB);
   static const Color shadow = Color(0x0A1A1D21);
 
-  // ─── Chart Colors ───────────────────────────────────────────
-  static const Color chartWeight = Color(0xFF2D6A4F);
-  static const Color chartCalories = Color(0xFFE76F51);
-  static const Color chartWater = Color(0xFF457B9D);
-  static const Color chartHabits = Color(0xFFF4A261);
-  static const Color chartProtein = Color(0xFF6A994E);
-  static const Color chartCarbs = Color(0xFFBC6C25);
-  static const Color chartFat = Color(0xFFDDA15E);
+  // ─── Chart Colors ──────────────────────────────────────────────
+  static const Color chartWeight = Color(0xFF00B894);
+  static const Color chartCalories = Color(0xFFFF6B6B);
+  static const Color chartWater = Color(0xFF74B9FF);
+  static const Color chartHabits = Color(0xFFFDCB6E);
+  static const Color chartProtein = Color(0xFF00B894);
+  static const Color chartCarbs = Color(0xFFFDCB6E);
+  static const Color chartFat = Color(0xFFFF6B6B);
 
-  // ─── Gradient Definitions ───────────────────────────────────
+  // ─── Gradient Definitions ──────────────────────────────────────
   static const LinearGradient primaryGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [Color(0xFF2D6A4F), Color(0xFF40916C)],
+    colors: [Color(0xFF00B894), Color(0xFF55EFC4)],
   );
 
   static const LinearGradient accentGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [Color(0xFFE76F51), Color(0xFFF4A261)],
+    colors: [Color(0xFFFF6B6B), Color(0xFFFF8E8E)],
+  );
+
+  static const LinearGradient headerGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [Color(0xFF00B894), Color(0xFF00CEC9)],
   );
 
   static const LinearGradient backgroundGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
-    colors: [Color(0xFFFAFBFC), Color(0xFFF0F2F5)],
+    colors: [Color(0xFFF8FAFB), Color(0xFFF1F3F5)],
   );
+
+  // ─── BMI Category Colors ──────────────────────────────────────
+  static const Color bmiUnderweight = Color(0xFF74B9FF);
+  static const Color bmiNormal = Color(0xFF00B894);
+  static const Color bmiOverweight = Color(0xFFFDCB6E);
+  static const Color bmiObese = Color(0xFFFF6B6B);
 }
 
 /// Dark theme color overrides
 class AppColorsDark {
   AppColorsDark._();
 
-  static const Color background = Color(0xFF0F1114);
-  static const Color surface = Color(0xFF1A1D21);
-  static const Color surfaceVariant = Color(0xFF24282E);
-  static const Color cardBackground = Color(0xFF1E2228);
-  static const Color cardBorder = Color(0xFF2E333A);
+  static const Color background = Color(0xFF0F1117);
+  static const Color surface = Color(0xFF1A1D26);
+  static const Color surfaceVariant = Color(0xFF242830);
+  static const Color cardBackground = Color(0xFF1E222C);
+  static const Color cardBorder = Color(0xFF2E3340);
 
-  static const Color textPrimary = Color(0xFFF0F2F5);
-  static const Color textSecondary = Color(0xFF9AA5B4);
-  static const Color textTertiary = Color(0xFF6B7785);
-  static const Color textDisabled = Color(0xFF4A5568);
+  static const Color textPrimary = Color(0xFFF1F3F5);
+  static const Color textSecondary = Color(0xFF9CA3AF);
+  static const Color textTertiary = Color(0xFF6B7280);
+  static const Color textDisabled = Color(0xFF4B5563);
   static const Color textOnPrimary = Color(0xFFFFFFFF);
 
-  static const Color divider = Color(0xFF2E333A);
+  static const Color divider = Color(0xFF2E3340);
   static const Color outline = Color(0xFF3A4049);
   static const Color shadow = Color(0x1A000000);
 
-  static const Color primarySurface = Color(0xFF1B4332);
-  static const Color accentSurface = Color(0xFF3D2518);
+  static const Color primarySurface = Color(0xFF0A2E24);
+  static const Color accentSurface = Color(0xFF2E1A1A);
+  static const Color secondarySurface = Color(0xFF2E2A1A);
 
-  static const Color successLight = Color(0xFF1B4332);
-  static const Color warningLight = Color(0xFF3D2518);
-  static const Color errorLight = Color(0xFF3D1A1A);
-  static const Color infoLight = Color(0xFF1A2D3D);
+  static const Color successLight = Color(0xFF0A2E24);
+  static const Color warningLight = Color(0xFF2E2A1A);
+  static const Color errorLight = Color(0xFF2E1A1A);
+  static const Color infoLight = Color(0xFF1A2A3D);
 
   static const LinearGradient backgroundGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
-    colors: [Color(0xFF0F1114), Color(0xFF16191E)],
+    colors: [Color(0xFF0F1117), Color(0xFF161922)],
   );
 }

@@ -1,18 +1,19 @@
-import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
+// Placeholder Firebase options – replace with actual values when setting up Firebase.
+//
+// When ready, add `firebase_core` to pubspec.yaml and run:
+//   flutterfire configure
+//
+// Then replace this file with the generated one.
 
 class DefaultFirebaseOptions {
-  static FirebaseOptions get currentPlatform {
-    // TODO: Replace with your actual Firebase configuration
-    // Obtain these values from the Firebase Console > Project Settings
-    return const FirebaseOptions(
-      apiKey: 'YOUR_API_KEY',
-      appId: 'YOUR_APP_ID',
-      messagingSenderId: 'YOUR_SENDER_ID',
-      projectId: 'gewichtskompass',
-      storageBucket: 'gewichtskompass.appspot.com',
-      iosBundleId: 'de.gewichtskompass',
-    );
-  }
+  static Map<String, dynamic> get currentPlatform => const {
+        'apiKey': 'YOUR_API_KEY',
+        'appId': 'YOUR_APP_ID',
+        'messagingSenderId': 'YOUR_SENDER_ID',
+        'projectId': 'gewichtskompass',
+        'storageBucket': 'gewichtskompass.appspot.com',
+        'iosBundleId': 'de.gewichtskompass',
+      };
 }
 
 /// Firestore Collection Schema:
@@ -35,6 +36,7 @@ class DefaultFirebaseOptions {
 ///   - dailyWaterGoalMl: int
 ///   - locale: String (de/ar)
 ///   - themeMode: String (light/dark/system)
+///   - isOnboarded: bool
 ///   - createdAt: Timestamp
 ///   - updatedAt: Timestamp
 ///
@@ -57,7 +59,7 @@ class DefaultFirebaseOptions {
 ///
 /// users/{userId}/meals/{entryId}
 ///   - date: Timestamp
-///   - mealType: String (breakfast/lunch/dinner/snacks)
+///   - mealType: String (breakfast/lunch/dinner/snack)
 ///   - name: String
 ///   - caloriesKcal: double
 ///   - proteinG: double
@@ -73,7 +75,7 @@ class DefaultFirebaseOptions {
 ///
 /// users/{userId}/workouts/{entryId}
 ///   - date: Timestamp
-///   - category: String (running/walking/strength/cycling/home/other)
+///   - category: String (running/walking/strength/cycling/homeWorkout/other)
 ///   - durationMin: int
 ///   - caloriesBurned: double?
 ///   - notes: String?
@@ -97,8 +99,6 @@ class DefaultFirebaseOptions {
 ///   - workoutReminder: bool
 ///   - motivationReminder: bool
 ///   - streakReminder: bool
-///   - weightReminderTime: String (HH:mm)
-///   - waterReminderIntervalMin: int
 ///
 /// users/{userId}/app_settings/{id}
 ///   - locale: String

@@ -185,5 +185,13 @@
   "kcal": "kcal",
   "min": "Min",
   "ml": "ml",
-  "oz": "oz"
+  "oz": "oz",
+  "goodMorning": "Guten Morgen",
+  "goodAfternoon": "Guten Tag",
+  "goodEvening": "Guten Abend",
+  "habitsToday": "Gewohnheiten heute",
+  "allHabitsDone": "Alle erledigt!",
+  "seeAll": "Alle",
+  "dailyInsight": "Täglicher Tipp",
+  "insightMessage": "Kleine Schritte führen zu großen Veränderungen. Bleib dran – du bist auf dem richtigen Weg!"
 }

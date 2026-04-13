@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../config/theme/app_colors.dart';
-import '../../config/theme/app_typography.dart';
 import '../../config/theme/app_spacing.dart';
 import '../../config/localization/app_localizations.dart';
 import '../../core/widgets/app_widgets.dart';
@@ -14,8 +13,6 @@ class AddWeightScreen extends StatefulWidget {
 
 class _AddWeightScreenState extends State<AddWeightScreen> {
   final _weightController = TextEditingController();
-  final DateTime _selectedDate = DateTime.now();
-  String _note = '';
 
   @override
   void dispose() { _weightController.dispose(); super.dispose(); }
@@ -59,7 +56,6 @@ class _AddWeightScreenState extends State<AddWeightScreen> {
               label: l10n.note,
               hint: l10n.noteHint,
               maxLines: 2,
-              onChanged: (v) => _note = v,
             ),
             const SizedBox(height: AppSpacing.xxl),
             PremiumButton(

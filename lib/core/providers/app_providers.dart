@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:riverpod/riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../domain/entities/user_profile.dart';
 import '../../domain/entities/weight_entry.dart';
 import '../../domain/usecases/health_calculations.dart';
@@ -55,6 +55,7 @@ final weightEntriesProvider = StateProvider<List<WeightEntry>>((ref) => []);
 class TodayStats {
   final double currentWeight;
   final double targetWeight;
+  final double startWeight; // Starting weight for progress calculation
   final double bmi;
   final double dailyCalorieTarget;
   final double caloriesConsumed;
@@ -68,6 +69,7 @@ class TodayStats {
   const TodayStats({
     this.currentWeight = 0,
     this.targetWeight = 0,
+    this.startWeight = 0,
     this.bmi = 0,
     this.dailyCalorieTarget = 0,
     this.caloriesConsumed = 0,
@@ -86,6 +88,16 @@ class TodayStats {
   double get habitProgress => habitsTotal > 0
       ? habitsCompleted / habitsTotal : 0;
   double get weightDifference => (currentWeight - targetWeight).abs();
+  
+  /// Progress toward target weight (0.0 to 1.0)
+  /// Requires startWeight; if not available, returns 0
+  double get weightProgress {
+    if (startWeight <= 0 || currentWeight <= 0 || targetWeight <= 0) return 0;
+    final totalToLose = (startWeight - targetWeight).abs();
+    if (totalToLose == 0) return 1.0;
+    final lost = (startWeight - currentWeight).abs();
+    return (lost / totalToLose).clamp(0.0, 1.0);
+  }
 }
 
 final todayStatsProvider = Provider<TodayStats>((ref) {
