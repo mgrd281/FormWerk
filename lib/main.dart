@@ -4,11 +4,16 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:go_router/go_router.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'config/theme/app_theme.dart';
 import 'config/router/app_router.dart';
 import 'config/localization/app_localizations.dart';
+import 'config/firebase/firebase_options.dart';
 import 'core/providers/app_providers.dart';
 import 'features/splash/splash_screen.dart';
+
+/// Whether Firebase was initialized successfully
+bool firebaseInitialized = false;
 
 /// Global error handler – prevents crashes on iOS
 void _handleError(Object error, StackTrace stackTrace) {
@@ -21,7 +26,7 @@ void _handleError(Object error, StackTrace stackTrace) {
 void main() {
   // Catch ALL unhandled async errors
   runZonedGuarded(
-    () {
+    () async {
       // Set up Flutter error handling
       FlutterError.onError = (FlutterErrorDetails details) {
         debugPrint('⚠️ Flutter Error: ${details.exception}');
@@ -30,6 +35,18 @@ void main() {
       };
 
       WidgetsFlutterBinding.ensureInitialized();
+
+      // Initialize Firebase safely – won't crash if config is invalid
+      try {
+        await Firebase.initializeApp(
+          options: DefaultFirebaseOptions.currentPlatform,
+        );
+        firebaseInitialized = true;
+        debugPrint('✅ Firebase initialized successfully');
+      } catch (e) {
+        firebaseInitialized = false;
+        debugPrint('⚠️ Firebase initialization failed (app will run in offline mode): $e');
+      }
 
       // Lock orientation to portrait
       SystemChrome.setPreferredOrientations([
