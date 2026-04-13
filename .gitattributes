@@ -1,0 +1,10 @@
+# Help GitHub detect this as an iOS/Swift project
+# This enables the "Open with Xcode" button
+
+*.swift linguist-language=Swift
+*.h linguist-language=Objective-C
+*.m linguist-language=Objective-C
+ios/** linguist-generated=false
+ios/**/*.swift linguist-language=Swift
+ios/**/*.h linguist-language=Objective-C
+ios/**/*.m linguist-language=Objective-C

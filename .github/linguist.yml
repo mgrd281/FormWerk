@@ -1,0 +1,28 @@
+# Override language detection for GitHub
+# This helps enable the "Open with Xcode" button
+
+languages:
+  - name: Swift
+    color: "#F05138"
+    extensions:
+      - ".swift"
+    linguist_language_id: 448
+
+  - name: Objective-C
+    color: "#438EFF"
+    extensions:
+      - ".h"
+      - ".m"
+    linguist_language_id: 42
+
+# Ensure iOS folder is not treated as generated/vendored code
+overrides:
+  "ios/**":
+    linguist-generated: false
+    linguist-vendored: false
+  "ios/**/*.swift":
+    linguist-language: Swift
+  "ios/**/*.h":
+    linguist-language: Objective-C
+  "ios/**/*.m":
+    linguist-language: Objective-C
