@@ -34,7 +34,7 @@ class ProfileScreen extends StatelessWidget {
                 Expanded(child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Benutzer', style: AppTypography.headline5),
+                    Text('Benutzer', style: AppTypography.titleLarge),
                     const SizedBox(height: 2),
                     Text('benutzer@email.de', style: AppTypography.bodySmall.copyWith(
                       color: theme.colorScheme.onSurface.withValues(alpha: 0.5),

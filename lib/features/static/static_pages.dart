@@ -17,9 +17,9 @@ class AboutScreen extends StatelessWidget {
             Container(width: 80, height: 80, decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(24),
-            ), child: const Icon(Icons.explore, size: 40, color: Theme.of(context).primaryColor)),
+            ), child: Icon(Icons.explore, size: 40, color: Theme.of(context).primaryColor)),
             const SizedBox(height: AppSpacing.lg),
-            Text(l10n.appName, style: AppTypography.headline4),
+            Text(l10n.appName, style: AppTypography.headlineSmall),
             const SizedBox(height: AppSpacing.xs),
             Text('Version 1.0.0', style: AppTypography.bodySmall.copyWith(
               color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
@@ -66,7 +66,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(AppSpacing.lg),
         children: [
-          Text(l10n.privacyTitle, style: AppTypography.headline5),
+          Text(l10n.privacyTitle, style: AppTypography.titleLarge),
           const SizedBox(height: AppSpacing.md),
           Text(l10n.privacyContent, style: AppTypography.bodyMedium.copyWith(
             color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
@@ -87,7 +87,7 @@ class TermsScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(AppSpacing.lg),
         children: [
-          Text(l10n.termsTitle, style: AppTypography.headline5),
+          Text(l10n.termsTitle, style: AppTypography.titleLarge),
           const SizedBox(height: AppSpacing.md),
           Text(l10n.termsContent, style: AppTypography.bodyMedium.copyWith(
             color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),

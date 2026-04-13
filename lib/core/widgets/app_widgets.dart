@@ -19,7 +19,7 @@ class PremiumCard extends StatelessWidget {
     this.padding,
     this.margin,
     this.color,
-    this.borderRadius = AppSpacing.radiusLg,
+    this.borderRadius = AppRadius.lg,
     this.onTap,
     this.shadow,
   });
@@ -95,7 +95,7 @@ class StatCard extends StatelessWidget {
                 padding: const EdgeInsets.all(AppSpacing.sm),
                 decoration: BoxDecoration(
                   color: accent.withValues(alpha: 0.12),
-                  borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+                  borderRadius: BorderRadius.circular(AppRadius.md),
                 ),
                 child: Icon(icon, size: 20, color: accent),
               ),
@@ -113,7 +113,7 @@ class StatCard extends StatelessWidget {
           const SizedBox(height: AppSpacing.md),
           Text(
             value,
-            style: AppTypography.headline3.copyWith(
+            style: AppTypography.headlineSmall.copyWith(
               color: theme.colorScheme.onSurface,
             ),
           ),
@@ -129,7 +129,7 @@ class StatCard extends StatelessWidget {
           if (progress != null) ...[
             const SizedBox(height: AppSpacing.sm),
             ClipRRect(
-              borderRadius: BorderRadius.circular(AppSpacing.radiusFull),
+              borderRadius: BorderRadius.circular(AppRadius.full),
               child: LinearProgressIndicator(
                 value: progress!.clamp(0.0, 1.0),
                 backgroundColor: accent.withValues(alpha: 0.12),
@@ -218,7 +218,7 @@ class PremiumButton extends StatelessWidget {
           style: OutlinedButton.styleFrom(
             side: BorderSide(color: accentColor, width: 1.5),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
+              borderRadius: BorderRadius.circular(AppRadius.lg),
             ),
           ),
           child: _buildChild(accentColor),
@@ -234,7 +234,7 @@ class PremiumButton extends StatelessWidget {
         style: FilledButton.styleFrom(
           backgroundColor: accentColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
+            borderRadius: BorderRadius.circular(AppRadius.lg),
           ),
           elevation: 0,
         ),
@@ -323,25 +323,23 @@ class PremiumInputField extends StatelessWidget {
             prefixIcon: prefixIcon,
             suffixIcon: suffixIcon,
             filled: true,
-            fillColor: theme.brightness == Brightness.dark
-                ? AppColors.surfaceDark
-                : AppColors.surfaceLight,
+            fillColor: theme.colorScheme.surface,
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+              borderRadius: BorderRadius.circular(AppRadius.md),
               borderSide: BorderSide.none,
             ),
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+              borderRadius: BorderRadius.circular(AppRadius.md),
               borderSide: BorderSide(
                 color: theme.colorScheme.outline.withValues(alpha: 0.2),
               ),
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+              borderRadius: BorderRadius.circular(AppRadius.md),
               borderSide: const BorderSide(color: AppColors.primary, width: 1.5),
             ),
             errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+              borderRadius: BorderRadius.circular(AppRadius.md),
               borderSide: const BorderSide(color: AppColors.error),
             ),
             contentPadding: const EdgeInsets.symmetric(
@@ -380,7 +378,7 @@ class SectionHeader extends StatelessWidget {
         children: [
           Text(
             title,
-            style: AppTypography.headline5.copyWith(
+            style: AppTypography.titleLarge.copyWith(
               color: theme.colorScheme.onSurface,
             ),
           ),
@@ -431,7 +429,7 @@ class EmptyState extends StatelessWidget {
             const SizedBox(height: AppSpacing.lg),
             Text(
               title,
-              style: AppTypography.headline5.copyWith(
+              style: AppTypography.titleLarge.copyWith(
                 color: theme.colorScheme.onSurface,
               ),
               textAlign: TextAlign.center,
@@ -481,7 +479,7 @@ class QuickActionChip extends StatelessWidget {
     final theme = Theme.of(context);
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
+      borderRadius: BorderRadius.circular(AppRadius.lg),
       child: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: AppSpacing.md,
@@ -489,7 +487,7 @@ class QuickActionChip extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           color: color.withValues(alpha: 0.1),
-          borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
+          borderRadius: BorderRadius.circular(AppRadius.lg),
           border: Border.all(color: color.withValues(alpha: 0.2)),
         ),
         child: Row(

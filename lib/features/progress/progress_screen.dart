@@ -26,7 +26,7 @@ class ProgressScreen extends StatelessWidget {
                 Row(children: [
                   Icon(Icons.trending_down, size: 20, color: AppColors.primary),
                   const SizedBox(width: AppSpacing.sm),
-                  Text(l10n.weightTrend, style: AppTypography.headline5),
+                  Text(l10n.weightTrend, style: AppTypography.titleLarge),
                 ]),
                 const SizedBox(height: AppSpacing.lg),
                 SizedBox(

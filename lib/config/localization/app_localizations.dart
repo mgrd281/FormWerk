@@ -62,6 +62,20 @@ class AppLocalizations {
   String get onboardingReadyTitle => _t('onboardingReadyTitle');
   String get onboardingReadySubtitle => _t('onboardingReadySubtitle');
   String get onboardingStart => _t('onboardingStart');
+  String get getStarted => _t('getStarted');
+  String get onboardingWelcome => _t('onboardingWelcome');
+  String get onboardingWelcomeDesc => _t('onboardingWelcomeDesc');
+  String get onboardingGoal => _t('onboardingGoal');
+  String get onboardingGoalDesc => _t('onboardingGoalDesc');
+  String get onboardingPersonal => _t('onboardingPersonal');
+  String get onboardingActivity => _t('onboardingActivity');
+  String get onboardingActivityDesc => _t('onboardingActivityDesc');
+  String get onboardingPreferences => _t('onboardingPreferences');
+  String get unitSystem => _t('unitSystem');
+  String get logAction => _t('logAction');
+  String get vegetarian => _t('vegetarian');
+  String get vegan => _t('vegan');
+  String get mediterranean => _t('mediterranean');
 
   // ─── Goals ──────────────────────────────────────────────────
   String get goalLose => _t('goalLose');
@@ -100,6 +114,23 @@ class AppLocalizations {
   String get passwordsDontMatch => _t('passwordsDontMatch');
   String get logout => _t('logout');
   String get logoutConfirm => _t('logoutConfirm');
+  String get welcomeBack => _t('welcomeBack');
+  String get welcomeBackDesc => _t('welcomeBackDesc');
+  String get emailHint => _t('emailHint');
+  String get passwordHint => _t('passwordHint');
+  String get invalidEmail => _t('invalidEmail');
+  String get invalidPassword => _t('invalidPassword');
+  String get signIn => _t('signIn');
+  String get signUp => _t('signUp');
+  String get signInWithGoogle => _t('signInWithGoogle');
+  String get createAccount => _t('createAccount');
+  String get createAccountDesc => _t('createAccountDesc');
+  String get displayName => _t('displayName');
+  String get displayNameHint => _t('displayNameHint');
+  String get requiredField => _t('requiredField');
+  String get hasAccount => _t('hasAccount');
+  String get or => _t('or');
+  String get signOut => _t('signOut');
 
   // ─── Home Dashboard ─────────────────────────────────────────
   String get homeTitle => _t('homeTitle');
@@ -123,6 +154,21 @@ class AppLocalizations {
   String get goodAfternoon => _t('goodAfternoon');
   String get goodEvening => _t('goodEvening');
   String get todaySummary => _t('todaySummary');
+  String get water => _t('water');
+  String get habitsToday => _t('habitsToday');
+  String get seeAll => _t('seeAll');
+  String get habitsCompleted => _t('habitsCompleted');
+  String get allHabitsDone => _t('allHabitsDone');
+  String get keepGoing => _t('keepGoing');
+  String get addWeightDesc => _t('addWeightDesc');
+  String get addMealDesc => _t('addMealDesc');
+  String get addWaterDesc => _t('addWaterDesc');
+  String get addWorkoutDesc => _t('addWorkoutDesc');
+  String get addMeasurementDesc => _t('addMeasurementDesc');
+  String get dailyHabits => _t('dailyHabits');
+  String get dailyInsight => _t('dailyInsight');
+  String get smartInsights => _t('smartInsights');
+  String get viewAnalytics => _t('viewAnalytics');
 
   // ─── Weight ─────────────────────────────────────────────────
   String get weightLog => _t('weightLog');
@@ -140,6 +186,12 @@ class AppLocalizations {
   String get deleteWeightConfirm => _t('deleteWeightConfirm');
   String get kg => _t('kg');
   String get lbs => _t('lbs');
+  String get weightKg => _t('weightKg');
+  String get date => _t('date');
+  String get note => _t('note');
+  String get noteHint => _t('noteHint');
+  String get notes => _t('notes');
+  String get notesHint => _t('notesHint');
 
   // ─── Measurements ───────────────────────────────────────────
   String get measurements => _t('measurements');
@@ -165,10 +217,15 @@ class AppLocalizations {
   String get dinner => _t('dinner');
   String get snacks => _t('snacks');
   String get mealName => _t('mealName');
+  String get mealNameHint => _t('mealNameHint');
   String get calories => _t('calories');
   String get protein => _t('protein');
   String get carbs => _t('carbs');
   String get fat => _t('fat');
+  String get caloriesKcal => _t('caloriesKcal');
+  String get proteinG => _t('proteinG');
+  String get carbsG => _t('carbsG');
+  String get fatG => _t('fatG');
   String get favoriteMeals => _t('favoriteMeals');
   String get customMeal => _t('customMeal');
   String get caloriesSummary => _t('caloriesSummary');
@@ -194,6 +251,7 @@ class AppLocalizations {
   String get homeWorkout => _t('homeWorkout');
   String get other => _t('other');
   String get duration => _t('duration');
+  String get durationMin => _t('durationMin');
   String get caloriesBurned => _t('caloriesBurned');
   String get workoutNotes => _t('workoutNotes');
   String get weeklySummary => _t('weeklySummary');
@@ -212,6 +270,12 @@ class AppLocalizations {
   String get today => _t('today');
   String get completed => _t('completed');
   String get notCompleted => _t('notCompleted');
+  String get habitWater => _t('habitWater');
+  String get habitWalk => _t('habitWalk');
+  String get habitWorkout => _t('habitWorkout');
+  String get habitNoSugar => _t('habitNoSugar');
+  String get habitSleep => _t('habitSleep');
+  String get habitCompletion => _t('habitCompletion');
 
   // ─── Analytics ──────────────────────────────────────────────
   String get analytics => _t('analytics');
@@ -223,6 +287,13 @@ class AppLocalizations {
   String get monthlyReport => _t('monthlyReport');
   String get goalForecast => _t('goalForecast');
   String get insights => _t('insights');
+  String get insightMessage => _t('insightMessage');
+  String get insightClose => _t('insightClose');
+  String get insightConsistent => _t('insightConsistent');
+  String get insightWater => _t('insightWater');
+  String get onTrack => _t('onTrack');
+  String get improving => _t('improving');
+  String get balanced => _t('balanced');
 
   // ─── Profile & Settings ─────────────────────────────────────
   String get profile => _t('profile');
@@ -250,6 +321,10 @@ class AppLocalizations {
   String get height => _t('height');
   String get dietaryPreference => _t('dietaryPreference');
   String get reminderSettings => _t('reminderSettings');
+  String get appSettings => _t('appSettings');
+  String get goalSettings => _t('goalSettings');
+  String get unitSettings => _t('unitSettings');
+  String get systemDefault => _t('systemDefault');
 
   // ─── Notifications ──────────────────────────────────────────
   String get weightReminder => _t('weightReminder');
@@ -278,6 +353,7 @@ class AppLocalizations {
   String get noWorkoutsYet => _t('noWorkoutsYet');
   String get noMeasurementsYet => _t('noMeasurementsYet');
   String get noHabitsYet => _t('noHabitsYet');
+  String get none => _t('none');
 
   // ─── Navigation ─────────────────────────────────────────────
   String get navHome => _t('navHome');
@@ -285,6 +361,18 @@ class AppLocalizations {
   String get navLog => _t('navLog');
   String get navHabits => _t('navHabits');
   String get navProfile => _t('navProfile');
+  String get week => _t('week');
+  String get month => _t('month');
+  String get year => _t('year');
+  String get threeMonths => _t('threeMonths');
+  String get sixMonths => _t('sixMonths');
+  String get aboutDescription => _t('aboutDescription');
+  String get privacyTitle => _t('privacyTitle');
+  String get privacyContent => _t('privacyContent');
+  String get terms => _t('terms');
+  String get termsTitle => _t('termsTitle');
+  String get termsContent => _t('termsContent');
+  String get logActionDesc => _t('logActionDesc');
 
   // ─── German Values ──────────────────────────────────────────
   static const Map<String, String> _deValues = {
@@ -318,6 +406,20 @@ class AppLocalizations {
     'onboardingReadyTitle': 'Du bist bereit!',
     'onboardingReadySubtitle': 'Alles ist eingerichtet. Lass uns gemeinsam dein Ziel erreichen.',
     'onboardingStart': 'Loslegen',
+    'getStarted': 'Loslegen',
+    'onboardingWelcome': 'Willkommen bei GewichtsKompass',
+    'onboardingWelcomeDesc': 'Dein persönlicher Begleiter für ein gesundes Gewicht.',
+    'onboardingGoal': 'Was ist dein Ziel?',
+    'onboardingGoalDesc': 'Wähle dein persönliches Ziel.',
+    'onboardingPersonal': 'Über dich',
+    'onboardingActivity': 'Dein Aktivitätslevel',
+    'onboardingActivityDesc': 'Wie aktiv bist du im Alltag?',
+    'onboardingPreferences': 'Deine Präferenzen',
+    'unitSystem': 'Einheitensystem',
+    'logAction': 'Erfassen',
+    'vegetarian': 'Vegetarisch',
+    'vegan': 'Vegan',
+    'mediterranean': 'Mediterran',
     'goalLose': 'Abnehmen',
     'goalMaintain': 'Halten',
     'goalGain': 'Zunehmen',
@@ -350,6 +452,23 @@ class AppLocalizations {
     'passwordsDontMatch': 'Passwörter stimmen nicht überein',
     'logout': 'Abmelden',
     'logoutConfirm': 'Möchtest du dich wirklich abmelden?',
+    'welcomeBack': 'Willkommen zurück',
+    'welcomeBackDesc': 'Melde dich an, um fortzufahren',
+    'emailHint': 'deine@email.de',
+    'passwordHint': 'Passwort eingeben',
+    'invalidEmail': 'Ungültige E-Mail-Adresse',
+    'invalidPassword': 'Passwort muss mind. 6 Zeichen haben',
+    'signIn': 'Anmelden',
+    'signUp': 'Registrieren',
+    'signInWithGoogle': 'Mit Google anmelden',
+    'createAccount': 'Konto erstellen',
+    'createAccountDesc': 'Starte deine Reise heute',
+    'displayName': 'Anzeigename',
+    'displayNameHint': 'Dein Name',
+    'requiredField': 'Pflichtfeld',
+    'hasAccount': 'Bereits ein Konto?',
+    'or': 'oder',
+    'signOut': 'Abmelden',
     'homeTitle': 'Übersicht',
     'currentWeight': 'Aktuelles Gewicht',
     'targetWeight': 'Zielgewicht',
@@ -371,6 +490,21 @@ class AppLocalizations {
     'goodAfternoon': 'Guten Tag',
     'goodEvening': 'Guten Abend',
     'todaySummary': 'Heutige Übersicht',
+    'water': 'Wasser',
+    'habitsToday': 'Gewohnheiten heute',
+    'seeAll': 'Alle anzeigen',
+    'habitsCompleted': 'Gewohnheiten erledigt',
+    'allHabitsDone': 'Alle Gewohnheiten erledigt!',
+    'keepGoing': 'Weiter so!',
+    'addWeightDesc': 'Gewicht eintragen',
+    'addMealDesc': 'Mahlzeit hinzufügen',
+    'addWaterDesc': 'Wasser hinzufügen',
+    'addWorkoutDesc': 'Workout hinzufügen',
+    'addMeasurementDesc': 'Messung hinzufügen',
+    'dailyHabits': 'Tägliche Gewohnheiten',
+    'dailyInsight': 'Täglicher Einblick',
+    'smartInsights': 'Smarte Einblicke',
+    'viewAnalytics': 'Analytik anzeigen',
     'weightLog': 'Gewicht eintragen',
     'weightHistory': 'Gewichtsverlauf',
     'weightCharts': 'Gewichtsdiagramme',
@@ -386,6 +520,12 @@ class AppLocalizations {
     'deleteWeightConfirm': 'Diesen Eintrag wirklich löschen?',
     'kg': 'kg',
     'lbs': 'lbs',
+    'weightKg': 'Gewicht (kg)',
+    'date': 'Datum',
+    'note': 'Notiz',
+    'noteHint': 'Notiz eingeben...',
+    'notes': 'Notizen',
+    'notesHint': 'Notizen eingeben...',
     'measurements': 'Körpermessungen',
     'addMeasurementTitle': 'Messung hinzufügen',
     'waist': 'Taille',
@@ -407,10 +547,15 @@ class AppLocalizations {
     'dinner': 'Abendessen',
     'snacks': 'Snacks',
     'mealName': 'Name der Mahlzeit',
+    'mealNameHint': 'z.B. Haferflocken',
     'calories': 'Kalorien',
     'protein': 'Protein',
     'carbs': 'Kohlenhydrate',
     'fat': 'Fett',
+    'caloriesKcal': 'Kalorien (kcal)',
+    'proteinG': 'Protein (g)',
+    'carbsG': 'Kohlenhydrate (g)',
+    'fatG': 'Fett (g)',
     'favoriteMeals': 'Lieblingsmahlzeiten',
     'customMeal': 'Eigene Mahlzeit',
     'caloriesSummary': 'Kalorienübersicht',
@@ -432,6 +577,7 @@ class AppLocalizations {
     'homeWorkout': 'Heimtraining',
     'other': 'Sonstiges',
     'duration': 'Dauer',
+    'durationMin': 'Dauer (Min)',
     'caloriesBurned': 'Kalorien verbrannt',
     'workoutNotes': 'Notizen',
     'weeklySummary': 'Wochenzusammenfassung',
@@ -448,6 +594,12 @@ class AppLocalizations {
     'today': 'Heute',
     'completed': 'Erledigt',
     'notCompleted': 'Nicht erledigt',
+    'habitWater': 'Wasser trinken',
+    'habitWalk': 'Spazieren',
+    'habitWorkout': 'Trainieren',
+    'habitNoSugar': 'Kein Zucker',
+    'habitSleep': 'Früh schlafen',
+    'habitCompletion': 'Erfüllungsrate',
     'analytics': 'Analytik',
     'weightTrend': 'Gewichtstrend',
     'calorieTrend': 'Kalorientrend',
@@ -457,6 +609,13 @@ class AppLocalizations {
     'monthlyReport': 'Monatsbericht',
     'goalForecast': 'Zielprognose',
     'insights': 'Einblicke',
+    'insightMessage': 'Einblick',
+    'insightClose': 'Du bist nah am Ziel!',
+    'insightConsistent': 'Du bist konsistent!',
+    'insightWater': 'Trink mehr Wasser!',
+    'onTrack': 'Auf dem richtigen Weg',
+    'improving': 'Verbessernd',
+    'balanced': 'Ausgeglichen',
     'profile': 'Profil',
     'editProfile': 'Profil bearbeiten',
     'settings': 'Einstellungen',
@@ -482,6 +641,10 @@ class AppLocalizations {
     'height': 'Größe',
     'dietaryPreference': 'Ernährungsweise',
     'reminderSettings': 'Erinnerungen',
+    'appSettings': 'App-Einstellungen',
+    'goalSettings': 'Ziel-Einstellungen',
+    'unitSettings': 'Einheiten-Einstellungen',
+    'systemDefault': 'Systemstandard',
     'weightReminder': 'Gewichtserinnerung',
     'waterReminder': 'Wassererinnerung',
     'mealReminder': 'Mahlzeiterinnerung',
@@ -502,11 +665,24 @@ class AppLocalizations {
     'noWorkoutsYet': 'Noch keine Workouts eingetragen',
     'noMeasurementsYet': 'Noch keine Messungen eingetragen',
     'noHabitsYet': 'Noch keine Gewohnheiten angelegt',
+    'none': 'Keine',
     'navHome': 'Start',
     'navProgress': 'Verlauf',
     'navLog': 'Eintragen',
     'navHabits': 'Gewohnheiten',
     'navProfile': 'Profil',
+    'week': 'Woche',
+    'month': 'Monat',
+    'year': 'Jahr',
+    'threeMonths': '3 Monate',
+    'sixMonths': '6 Monate',
+    'aboutDescription': 'GewichtsKompass – dein persönlicher Begleiter für ein gesundes Gewicht.',
+    'privacyTitle': 'Datenschutzerklärung',
+    'privacyContent': 'Deine Daten werden vertraulich behandelt.',
+    'terms': 'AGB',
+    'termsTitle': 'Allgemeine Geschäftsbedingungen',
+    'termsContent': 'Nutzungsbedingungen der App.',
+    'logActionDesc': 'Erfasse deine Daten',
   };
 
   // ─── Arabic Values ──────────────────────────────────────────
@@ -541,6 +717,20 @@ class AppLocalizations {
     'onboardingReadyTitle': 'أنت جاهز!',
     'onboardingReadySubtitle': 'كل شيء جاهز. لنصل إلى هدفك معاً.',
     'onboardingStart': 'لنبدأ',
+    'getStarted': 'لنبدأ',
+    'onboardingWelcome': 'مرحباً بك في بوصلة الوزن',
+    'onboardingWelcomeDesc': 'رفيقك الشخصي نحو وزن صحي.',
+    'onboardingGoal': 'ما هدفك؟',
+    'onboardingGoalDesc': 'اختر هدفك الشخصي.',
+    'onboardingPersonal': 'عنك',
+    'onboardingActivity': 'مستوى نشاطك',
+    'onboardingActivityDesc': 'ما مدى نشاطك في حياتك اليومية؟',
+    'onboardingPreferences': 'تفضيلاتك',
+    'unitSystem': 'نظام الوحدات',
+    'logAction': 'تسجيل',
+    'vegetarian': 'نباتي',
+    'vegan': 'نباتي صرف',
+    'mediterranean': 'متوسطي',
     'goalLose': 'خسارة الوزن',
     'goalMaintain': 'الحفاظ',
     'goalGain': 'زيادة الوزن',
@@ -573,6 +763,23 @@ class AppLocalizations {
     'passwordsDontMatch': 'كلمات المرور غير متطابقة',
     'logout': 'تسجيل الخروج',
     'logoutConfirm': 'هل تريد تسجيل الخروج فعلاً؟',
+    'welcomeBack': 'مرحباً بعودتك',
+    'welcomeBackDesc': 'سجّل الدخول للمتابعة',
+    'emailHint': 'your@email.com',
+    'passwordHint': 'أدخل كلمة المرور',
+    'invalidEmail': 'بريد إلكتروني غير صالح',
+    'invalidPassword': 'كلمة المرور يجب أن تكون 6 أحرف على الأقل',
+    'signIn': 'تسجيل الدخول',
+    'signUp': 'إنشاء حساب',
+    'signInWithGoogle': 'تسجيل الدخول بحساب Google',
+    'createAccount': 'إنشاء حساب',
+    'createAccountDesc': 'ابدأ رحلتك اليوم',
+    'displayName': 'الاسم',
+    'displayNameHint': 'اسمك',
+    'requiredField': 'حقل مطلوب',
+    'hasAccount': 'لديك حساب بالفعل؟',
+    'or': 'أو',
+    'signOut': 'تسجيل الخروج',
     'homeTitle': 'نظرة عامة',
     'currentWeight': 'الوزن الحالي',
     'targetWeight': 'الوزن المستهدف',
@@ -594,6 +801,21 @@ class AppLocalizations {
     'goodAfternoon': 'مساء الخير',
     'goodEvening': 'مساء النور',
     'todaySummary': 'ملخص اليوم',
+    'water': 'ماء',
+    'habitsToday': 'عادات اليوم',
+    'seeAll': 'عرض الكل',
+    'habitsCompleted': 'عادات مكتملة',
+    'allHabitsDone': 'جميع العادات مكتملة!',
+    'keepGoing': 'استمر!',
+    'addWeightDesc': 'سجّل وزنك',
+    'addMealDesc': 'أضف وجبة',
+    'addWaterDesc': 'أضف ماء',
+    'addWorkoutDesc': 'أضف تمرين',
+    'addMeasurementDesc': 'أضف قياس',
+    'dailyHabits': 'العادات اليومية',
+    'dailyInsight': 'رؤية يومية',
+    'smartInsights': 'رؤى ذكية',
+    'viewAnalytics': 'عرض التحليلات',
     'weightLog': 'تسجيل الوزن',
     'weightHistory': 'سجل الوزن',
     'weightCharts': 'رسوم الوزن',
@@ -609,6 +831,12 @@ class AppLocalizations {
     'deleteWeightConfirm': 'هل تريد حذف هذا الإدخال فعلاً؟',
     'kg': 'كجم',
     'lbs': 'رطل',
+    'weightKg': 'الوزن (كجم)',
+    'date': 'التاريخ',
+    'note': 'ملاحظة',
+    'noteHint': 'أدخل ملاحظة...',
+    'notes': 'ملاحظات',
+    'notesHint': 'أدخل ملاحظات...',
     'measurements': 'قياسات الجسم',
     'addMeasurementTitle': 'إضافة قياس',
     'waist': 'الخصر',
@@ -630,10 +858,15 @@ class AppLocalizations {
     'dinner': 'عشاء',
     'snacks': 'وجبات خفيفة',
     'mealName': 'اسم الوجبة',
+    'mealNameHint': 'مثال: شوفان',
     'calories': 'السعرات',
     'protein': 'بروتين',
     'carbs': 'كربوهيدرات',
     'fat': 'دهون',
+    'caloriesKcal': 'السعرات (سعرة)',
+    'proteinG': 'بروتين (غ)',
+    'carbsG': 'كربوهيدرات (غ)',
+    'fatG': 'دهون (غ)',
     'favoriteMeals': 'الوجبات المفضلة',
     'customMeal': 'وجبة مخصصة',
     'caloriesSummary': 'ملخص السعرات',
@@ -655,6 +888,7 @@ class AppLocalizations {
     'homeWorkout': 'تمارين منزلية',
     'other': 'أخرى',
     'duration': 'المدة',
+    'durationMin': 'المدة (دقيقة)',
     'caloriesBurned': 'السعرات المحروقة',
     'workoutNotes': 'ملاحظات',
     'weeklySummary': 'ملخص الأسبوع',
@@ -671,6 +905,12 @@ class AppLocalizations {
     'today': 'اليوم',
     'completed': 'مكتمل',
     'notCompleted': 'غير مكتمل',
+    'habitWater': 'شرب الماء',
+    'habitWalk': 'المشي',
+    'habitWorkout': 'التمرين',
+    'habitNoSugar': 'بدون سكر',
+    'habitSleep': 'النوم مبكراً',
+    'habitCompletion': 'معدل الإنجاز',
     'analytics': 'التحليلات',
     'weightTrend': 'اتجاه الوزن',
     'calorieTrend': 'اتجاه السعرات',
@@ -680,6 +920,13 @@ class AppLocalizations {
     'monthlyReport': 'تقرير شهري',
     'goalForecast': 'توقع الهدف',
     'insights': 'رؤى',
+    'insightMessage': 'رؤية',
+    'insightClose': 'أنت قريب من الهدف!',
+    'insightConsistent': 'أنت منتظم!',
+    'insightWater': 'اشرب المزيد من الماء!',
+    'onTrack': 'على المسار الصحيح',
+    'improving': 'في تحسن',
+    'balanced': 'متوازن',
     'profile': 'الملف الشخصي',
     'editProfile': 'تعديل الملف',
     'settings': 'الإعدادات',
@@ -705,6 +952,10 @@ class AppLocalizations {
     'height': 'الطول',
     'dietaryPreference': 'النظام الغذائي',
     'reminderSettings': 'التذكيرات',
+    'appSettings': 'إعدادات التطبيق',
+    'goalSettings': 'إعدادات الهدف',
+    'unitSettings': 'إعدادات الوحدات',
+    'systemDefault': 'افتراضي النظام',
     'weightReminder': 'تذكير الوزن',
     'waterReminder': 'تذكير الماء',
     'mealReminder': 'تذكير الوجبات',
@@ -725,11 +976,24 @@ class AppLocalizations {
     'noWorkoutsYet': 'لا توجد تمارين مسجلة بعد',
     'noMeasurementsYet': 'لا توجد قياسات مسجلة بعد',
     'noHabitsYet': 'لا توجد عادات بعد',
+    'none': 'بدون',
     'navHome': 'الرئيسية',
     'navProgress': 'التقدم',
     'navLog': 'تسجيل',
     'navHabits': 'العادات',
     'navProfile': 'الملف',
+    'week': 'أسبوع',
+    'month': 'شهر',
+    'year': 'سنة',
+    'threeMonths': '3 أشهر',
+    'sixMonths': '6 أشهر',
+    'aboutDescription': 'بوصلة الوزن – رفيقك الشخصي نحو وزن صحي.',
+    'privacyTitle': 'سياسة الخصوصية',
+    'privacyContent': 'بياناتك تعامل بسرية تامة.',
+    'terms': 'الشروط',
+    'termsTitle': 'الشروط والأحكام',
+    'termsContent': 'شروط استخدام التطبيق.',
+    'logActionDesc': 'سجّل بياناتك',
   };
 }
 

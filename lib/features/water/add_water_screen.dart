@@ -29,7 +29,7 @@ class _AddWaterScreenState extends State<AddWaterScreen> {
             color: AppColors.info.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(24),
           ), child: const Icon(Icons.water_drop_outlined, size: 40, color: AppColors.info))),
           const SizedBox(height: AppSpacing.xxl),
-          Text('${_amount.toInt()} ml', style: AppTypography.headline2.copyWith(color: AppColors.info)),
+          Text('${_amount.toInt()} ml', style: AppTypography.headlineMedium.copyWith(color: AppColors.info)),
           const SizedBox(height: AppSpacing.xl),
           SliderTheme(
             data: SliderThemeData(
@@ -65,7 +65,7 @@ class _AddWaterScreenState extends State<AddWaterScreen> {
         padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md, vertical: AppSpacing.sm),
         decoration: BoxDecoration(
           color: selected ? AppColors.info.withValues(alpha: 0.1) : Theme.of(context).colorScheme.surface,
-          borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+          borderRadius: BorderRadius.circular(AppRadius.md),
           border: Border.all(color: selected ? AppColors.info : Theme.of(context).colorScheme.outline.withValues(alpha: 0.2)),
         ),
         child: Text(label, style: AppTypography.bodySmall.copyWith(

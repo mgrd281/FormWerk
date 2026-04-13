@@ -6,19 +6,16 @@ class AppTypography {
   AppTypography._();
 
   // ─── Font Families ──────────────────────────────────────────
-  static const String latinFont = 'Inter';
-  static const String arabicFont = 'Cairo';
-
   /// Returns the appropriate font family based on locale
-  static String fontFamilyForLocale(Locale locale) {
-    return locale.languageCode == 'ar' ? arabicFont : latinFont;
+  /// (Returns null to use system default when custom fonts aren't available)
+  static String? fontFamilyForLocale(Locale locale) {
+    return null; // Uses system default fonts
   }
 
   // ─── Light Theme Text Styles ────────────────────────────────
 
   /// Display – Large hero headlines, onboarding titles
   static const TextStyle displayLarge = TextStyle(
-    fontFamily: latinFont,
     fontSize: 32,
     fontWeight: FontWeight.w700,
     height: 1.2,
@@ -27,7 +24,6 @@ class AppTypography {
 
   /// Display – Medium hero headlines
   static const TextStyle displayMedium = TextStyle(
-    fontFamily: latinFont,
     fontSize: 28,
     fontWeight: FontWeight.w700,
     height: 1.25,
@@ -36,7 +32,6 @@ class AppTypography {
 
   /// Display – Small hero headlines
   static const TextStyle displaySmall = TextStyle(
-    fontFamily: latinFont,
     fontSize: 24,
     fontWeight: FontWeight.w600,
     height: 1.3,
@@ -45,7 +40,6 @@ class AppTypography {
 
   /// Headline – Section headers
   static const TextStyle headlineLarge = TextStyle(
-    fontFamily: latinFont,
     fontSize: 22,
     fontWeight: FontWeight.w600,
     height: 1.3,
@@ -54,7 +48,6 @@ class AppTypography {
 
   /// Headline – Card titles
   static const TextStyle headlineMedium = TextStyle(
-    fontFamily: latinFont,
     fontSize: 20,
     fontWeight: FontWeight.w600,
     height: 1.35,
@@ -62,7 +55,6 @@ class AppTypography {
 
   /// Headline – Subsection headers
   static const TextStyle headlineSmall = TextStyle(
-    fontFamily: latinFont,
     fontSize: 18,
     fontWeight: FontWeight.w600,
     height: 1.4,
@@ -70,7 +62,6 @@ class AppTypography {
 
   /// Title – List item titles, prominent labels
   static const TextStyle titleLarge = TextStyle(
-    fontFamily: latinFont,
     fontSize: 16,
     fontWeight: FontWeight.w600,
     height: 1.4,
@@ -78,7 +69,6 @@ class AppTypography {
 
   /// Title – Medium emphasis titles
   static const TextStyle titleMedium = TextStyle(
-    fontFamily: latinFont,
     fontSize: 15,
     fontWeight: FontWeight.w500,
     height: 1.4,
@@ -86,7 +76,6 @@ class AppTypography {
 
   /// Title – Small emphasis titles
   static const TextStyle titleSmall = TextStyle(
-    fontFamily: latinFont,
     fontSize: 14,
     fontWeight: FontWeight.w500,
     height: 1.4,
@@ -94,7 +83,6 @@ class AppTypography {
 
   /// Body – Primary body text
   static const TextStyle bodyLarge = TextStyle(
-    fontFamily: latinFont,
     fontSize: 16,
     fontWeight: FontWeight.w400,
     height: 1.5,
@@ -102,7 +90,6 @@ class AppTypography {
 
   /// Body – Standard body text
   static const TextStyle bodyMedium = TextStyle(
-    fontFamily: latinFont,
     fontSize: 14,
     fontWeight: FontWeight.w400,
     height: 1.5,
@@ -110,7 +97,6 @@ class AppTypography {
 
   /// Body – Small body text
   static const TextStyle bodySmall = TextStyle(
-    fontFamily: latinFont,
     fontSize: 13,
     fontWeight: FontWeight.w400,
     height: 1.5,
@@ -118,7 +104,6 @@ class AppTypography {
 
   /// Label – Button labels, form labels
   static const TextStyle labelLarge = TextStyle(
-    fontFamily: latinFont,
     fontSize: 14,
     fontWeight: FontWeight.w600,
     height: 1.4,
@@ -127,7 +112,6 @@ class AppTypography {
 
   /// Label – Medium labels, chips
   static const TextStyle labelMedium = TextStyle(
-    fontFamily: latinFont,
     fontSize: 12,
     fontWeight: FontWeight.w500,
     height: 1.4,
@@ -136,7 +120,6 @@ class AppTypography {
 
   /// Label – Small labels, captions
   static const TextStyle labelSmall = TextStyle(
-    fontFamily: latinFont,
     fontSize: 11,
     fontWeight: FontWeight.w500,
     height: 1.4,
@@ -145,7 +128,6 @@ class AppTypography {
 
   /// Caption – Overlines, timestamps
   static const TextStyle caption = TextStyle(
-    fontFamily: latinFont,
     fontSize: 10,
     fontWeight: FontWeight.w500,
     height: 1.4,
@@ -156,7 +138,6 @@ class AppTypography {
 
   /// Large stat number (e.g., current weight on dashboard)
   static const TextStyle statLarge = TextStyle(
-    fontFamily: latinFont,
     fontSize: 36,
     fontWeight: FontWeight.w700,
     height: 1.1,
@@ -165,7 +146,6 @@ class AppTypography {
 
   /// Medium stat number
   static const TextStyle statMedium = TextStyle(
-    fontFamily: latinFont,
     fontSize: 24,
     fontWeight: FontWeight.w700,
     height: 1.2,
@@ -174,7 +154,6 @@ class AppTypography {
 
   /// Small stat number
   static const TextStyle statSmall = TextStyle(
-    fontFamily: latinFont,
     fontSize: 18,
     fontWeight: FontWeight.w600,
     height: 1.2,

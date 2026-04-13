@@ -40,7 +40,7 @@ class AnalyticsScreen extends StatelessWidget {
               Row(children: [
                 Icon(Icons.trending_down, size: 20, color: AppColors.primary),
                 const SizedBox(width: AppSpacing.sm),
-                Text(l10n.weightTrend, style: AppTypography.headline5),
+                Text(l10n.weightTrend, style: AppTypography.titleLarge),
               ]),
               const SizedBox(height: AppSpacing.lg),
               SizedBox(height: 180, child: CustomPaint(painter: _ChartPainter(AppColors.primary),
@@ -60,7 +60,7 @@ class AnalyticsScreen extends StatelessWidget {
               Row(children: [
                 Icon(Icons.local_fire_department, size: 20, color: AppColors.accent),
                 const SizedBox(width: AppSpacing.sm),
-                Text(l10n.calorieTrend, style: AppTypography.headline5),
+                Text(l10n.calorieTrend, style: AppTypography.titleLarge),
               ]),
               const SizedBox(height: AppSpacing.lg),
               SizedBox(height: 180, child: CustomPaint(painter: _ChartPainter(AppColors.accent),
@@ -80,7 +80,7 @@ class AnalyticsScreen extends StatelessWidget {
               Row(children: [
                 Icon(Icons.check_circle, size: 20, color: AppColors.success),
                 const SizedBox(width: AppSpacing.sm),
-                Text(l10n.habitCompletion, style: AppTypography.headline5),
+                Text(l10n.habitCompletion, style: AppTypography.titleLarge),
               ]),
               const SizedBox(height: AppSpacing.lg),
               _BarChart(),
@@ -99,7 +99,7 @@ class AnalyticsScreen extends StatelessWidget {
               Row(children: [
                 Icon(Icons.lightbulb_outline, size: 20, color: AppColors.primary),
                 const SizedBox(width: AppSpacing.sm),
-                Text(l10n.smartInsights, style: AppTypography.headline5),
+                Text(l10n.smartInsights, style: AppTypography.titleLarge),
               ]),
               const SizedBox(height: AppSpacing.md),
               _InsightRow(l10n.insightConsistent, AppColors.success),
@@ -124,7 +124,7 @@ class _PeriodChip extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.sm),
       decoration: BoxDecoration(
         color: selected ? AppColors.primary : Colors.transparent,
-        borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+        borderRadius: BorderRadius.circular(AppRadius.md),
         border: Border.all(color: selected ? AppColors.primary : Theme.of(context).colorScheme.outline.withValues(alpha: 0.2)),
       ),
       child: Text(label, style: AppTypography.bodySmall.copyWith(
@@ -146,7 +146,7 @@ class _StatPill extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md, vertical: AppSpacing.xs),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(AppSpacing.radiusSm),
+        borderRadius: BorderRadius.circular(AppRadius.sm),
       ),
       child: Text(text, style: AppTypography.caption.copyWith(color: color, fontWeight: FontWeight.w600)),
     );

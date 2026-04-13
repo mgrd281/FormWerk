@@ -42,14 +42,13 @@ class AppTheme {
         surfaceTintColor: Colors.transparent,
         systemOverlayStyle: SystemUiOverlayStyle.dark,
         titleTextStyle: TextStyle(
-          fontFamily: AppTypography.latinFont,
           fontSize: 20,
           fontWeight: FontWeight.w600,
           color: AppColors.textPrimary,
           letterSpacing: -0.1,
         ),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         elevation: 0,
         color: AppColors.cardBackground,
         surfaceTintColor: Colors.transparent,
@@ -151,12 +150,10 @@ class AppTheme {
         type: BottomNavigationBarType.fixed,
         elevation: 0,
         selectedLabelStyle: TextStyle(
-          fontFamily: AppTypography.latinFont,
           fontSize: 11,
           fontWeight: FontWeight.w600,
         ),
         unselectedLabelStyle: TextStyle(
-          fontFamily: AppTypography.latinFont,
           fontSize: 11,
           fontWeight: FontWeight.w400,
         ),
@@ -209,7 +206,7 @@ class AppTheme {
           side: BorderSide.none,
         ),
       ),
-      dialogTheme: DialogTheme(
+      dialogTheme: DialogThemeData(
         backgroundColor: AppColors.surface,
         elevation: 0,
         shape: RoundedRectangleBorder(
@@ -307,14 +304,13 @@ class AppTheme {
         surfaceTintColor: Colors.transparent,
         systemOverlayStyle: SystemUiOverlayStyle.light,
         titleTextStyle: TextStyle(
-          fontFamily: AppTypography.latinFont,
           fontSize: 20,
           fontWeight: FontWeight.w600,
           color: AppColorsDark.textPrimary,
           letterSpacing: -0.1,
         ),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         elevation: 0,
         color: AppColorsDark.cardBackground,
         surfaceTintColor: Colors.transparent,
@@ -466,7 +462,7 @@ class AppTheme {
           side: BorderSide.none,
         ),
       ),
-      dialogTheme: DialogTheme(
+      dialogTheme: DialogThemeData(
         backgroundColor: AppColorsDark.surface,
         elevation: 0,
         shape: RoundedRectangleBorder(

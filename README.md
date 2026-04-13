@@ -1,501 +1,211 @@
-<div align="center">
+# 🏋️ FormWerk
 
-# 🧭 GewichtsKompass
+> **Dein intelligenter Begleiter für Gesundheit, Fitness & Gewichtsmanagement**
 
-**Premium Weight Management & Wellness App**
-
-[![Flutter](https://img.shields.io/badge/Flutter-3.27+-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
-[![Dart](https://img.shields.io/badge/Dart-3.6+-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
-[![iOS](https://img.shields.io/badge/iOS-16+-000000?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/ios/)
-[![Android](https://img.shields.io/badge/Android-API%2021+-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com)
-
-[🌐 Deutsch](#) · [🇸🇦 العربية](#) · [📱 iOS Setup](#-opening-in-xcode--ios) · [🤖 Android Setup](#-android-setup)
-
-</div>
+[![Flutter](https://img.shields.io/badge/Flutter-3.29.0-02569B?logo=flutter)](https://flutter.dev)
+[![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-green)](https://github.com/mgrd281/FormWerk)
+[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 ---
 
-## 📱 About
+## 📱 Über FormWerk
 
-GewichtsKompass (بوصلة الوزن) is a premium, production-ready Flutter application for holistic weight management and wellness. Track your weight, body measurements, nutrition, water intake, workouts, and daily habits — all in one beautifully designed app with full bilingual support (German + Arabic RTL).
+FormWerk ist eine Premium-Flutter-App für ganzheitliches Gesundheitsmanagement. Sie verbindet Gewichtsverfolgung, Ernährungsplanung, Trainingsprotokollierung und Habit-Tracking in einer eleganten, intuitiven Oberfläche.
 
----
+### ✨ Hauptfunktionen
 
-## ✨ Features
-
-| Category | Features |
-|----------|----------|
-| 🏠 **Dashboard** | Current weight, BMI, calories, water, habits — all at a glance |
-| ⚖️ **Weight Tracking** | Log, edit, delete entries with trend charts & milestones |
-| 📏 **Body Measurements** | Waist, chest, hips, arms, thighs, neck, body fat % |
-| 🍽️ **Meal Logging** | Breakfast / lunch / dinner / snacks with macros tracking |
-| 💧 **Water Tracking** | Quick logging with daily goals & reminders |
-| 🏋️ **Workout Logging** | Running, walking, strength, cycling & more |
-| ✅ **Habit Tracking** | Daily habits with streaks & celebrations |
-| 📊 **Analytics** | Premium charts, trends, smart insights & goal forecasts |
-| 🌍 **Bilingual** | German (default, LTR) + Arabic (full RTL support) |
-| 🌙 **Themes** | Light, Dark, System — all premium quality |
-| 🔔 **Notifications** | Customizable reminders for weight, water, meals, workouts |
-| 🔐 **Authentication** | Email, Google, Apple sign-in + guest mode |
+| Bereich | Features |
+|---------|----------|
+| 🏠 **Dashboard** | Tagesübersicht, Fortschritt, Schnellzugriff |
+| ⚖️ **Gewicht** | Gewichtsverfolgung, BMI-Berechnung, Verlauf |
+| 📏 **Messungen** | Körpermaße dokumentieren & vergleichen |
+| 🍽️ **Ernährung** | Mahlzeiten erfassen, Kalorien & Makros |
+| 💧 **Wasser** | Tägliche Trinkmenge im Blick behalten |
+| 🏃 **Training** | Workouts protokollieren, Dauer & Intensität |
+| ✅ **Gewohnheiten** | Tägliche Habits tracken, Streaks aufbauen |
+| 📊 **Analyse** | Smarte Insights, Trends & Statistiken |
+| 👤 **Profil** | Persönliche Daten, Ziele & Einstellungen |
 
 ---
 
-## 🏗️ Architecture
+## 🚀 Schnellstart
 
-```
-Clean Architecture + Feature-First
-├── config/          # Theme, routing, localization, Firebase
-├── core/            # Shared widgets, constants, providers
-├── data/            # Models, repositories impl, data sources
-├── domain/          # Entities, repository interfaces, use cases
-└── features/        # Feature screens organized by domain
-```
+### Voraussetzungen
 
-| Layer | Technology |
-|-------|-----------|
-| **State Management** | Riverpod (`flutter_riverpod` + `riverpod_annotation`) |
-| **Routing** | go_router with `ShellRoute` for bottom navigation |
-| **Backend** | Firebase (Auth, Firestore, Analytics, Crashlytics, FCM) |
-| **Local Cache** | Hive (ready for offline-first integration) |
-| **Charts** | fl_chart for premium analytics visualizations |
-| **Localization** | Flutter's built-in `gen-l10n` with ARB files |
+- **Flutter SDK** ≥ 3.29.0 ([Installationsanleitung](https://docs.flutter.dev/get-started/install))
+- **Xcode** ≥ 16.0 (für iOS)
+- **Android Studio** (für Android)
+- **CocoaPods** ≥ 1.16.0
 
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-| Tool | Minimum Version | Purpose |
-|------|----------------|---------|
-| [Flutter](https://docs.flutter.dev/get-started/install) | 3.27+ | Framework |
-| [Dart](https://dart.dev/get-dart) | 3.6+ | Language |
-| [Xcode](https://developer.apple.com/xcode/) | 16+ | iOS builds |
-| [CocoaPods](https://cocoapods.org/) | Latest | iOS dependencies |
-| [Android Studio](https://developer.android.com/studio) | Latest | Android builds |
-| [Firebase CLI](https://firebase.google.com/docs/cli) | Latest | Firebase setup |
-
-### Quick Start
+### Projekt einrichten
 
 ```bash
-# 1. Clone the repository
+# 1. Repository klonen
 git clone https://github.com/mgrd281/FormWerk.git
 cd FormWerk
 
-# 2. Install Flutter dependencies
+# 2. Abhängigkeiten installieren
 flutter pub get
 
-# 3. Generate localization files
-flutter gen-l10n
+# 3. iOS Pods installieren
+cd ios && pod install && cd ..
 
-# 4. Run the app (choose your platform)
+# 4. App starten
 flutter run
 ```
 
 ---
 
-## 🍎 Opening in Xcode / iOS
-
-> **Note:** GitHub's "Open with Xcode" button only works for native iOS projects (`.xcodeproj` at root). Flutter projects require a few extra steps — but it's straightforward!
-
-### Step-by-Step: Open in Xcode
-
-```bash
-# 1. Navigate to the iOS directory
-cd ios
-
-# 2. Install CocoaPods dependencies
-pod install
-
-# 3. Open the WORKSPACE (not .xcodeproj!)
-open Runner.xcworkspace
-```
-
-> ⚠️ **Important:** Always open `Runner.xcworkspace`, NOT `Runner.xcodeproj`. The workspace includes CocoaPods dependencies.
-
-### Step-by-Step: Run on iPhone
-
-**Option A: Via Xcode**
-1. Open `Runner.xcworkspace` as described above
-2. Connect your iPhone via USB (or select a simulator)
-3. Select **Runner** scheme → your device as the target
-4. Click ▶️ **Run** (or press `⌘R`)
-
-**Option B: Via Flutter CLI (Recommended)**
-```bash
-# List available devices
-flutter devices
-
-# Run on a specific iOS device
-flutter run -d <device-id>
-
-# Or run on iOS simulator
-flutter run -d ios
-```
-
-### Common iOS Issues & Fixes
-
-| Issue | Solution |
-|-------|---------|
-| `pod install` fails | Run `pod repo update` then `pod install` again |
-| Signing error in Xcode | Select **Runner** → **Signing & Capabilities** → choose your Team |
-| Build fails with module errors | Run `flutter clean && flutter pub get && cd ios && pod install` |
-| "No device" in Xcode | Ensure your iPhone is trusted: Settings → General → Device Management |
-| CocoaPods version mismatch | Run `sudo gem install cocoapods` to update |
-
-### iOS Build for Release
-
-```bash
-# Build IPA for App Store / TestFlight
-flutter build ipa --release
-
-# The output will be at:
-# build/ios/ipa/gewichtskompass.ipa
-```
-
----
-
-## 🤖 Android Setup
-
-```bash
-# Run on Android emulator or device
-flutter run -d android
-
-# Build release AAB for Play Store
-flutter build appbundle --release
-
-# Build release APK
-flutter build apk --release
-```
-
----
-
-## 🔥 Firebase Setup
-
-The project uses Firebase for authentication, database, analytics, and more. Follow these steps to configure:
-
-### 1. Create Firebase Project
-
-1. Go to [Firebase Console](https://console.firebase.google.com)
-2. Create a new project named **GewichtsKompass**
-3. Enable the following services:
-   - **Authentication** → Email/Password, Google, Apple
-   - **Cloud Firestore** → Start in test mode
-   - **Analytics** → Enable
-   - **Crashlytics** → Enable
-   - **Cloud Messaging** → Enable
-
-### 2. Register Apps
-
-| Platform | Bundle ID / Package Name |
-|----------|------------------------|
-| iOS | `de.gewichtskompass.app` |
-| Android | `de.gewichtskompass.app` |
-
-### 3. Download Config Files
-
-| Platform | File | Destination |
-|----------|------|-------------|
-| iOS | `GoogleService-Info.plist` | `ios/Runner/GoogleService-Info.plist` |
-| Android | `google-services.json` | `android/app/google-services.json` |
-
-> 📝 Both config files are already in `.gitignore` — they will NOT be committed to the repository.
-
-### 4. Update Firebase Options
-
-Edit `lib/config/firebase/firebase_options.dart` and replace the placeholder values:
-
-```dart
-static FirebaseOptions get currentPlatform {
-  return const FirebaseOptions(
-    apiKey: 'YOUR_ACTUAL_API_KEY',        // ← Replace
-    appId: 'YOUR_ACTUAL_APP_ID',          // ← Replace
-    messagingSenderId: 'YOUR_SENDER_ID',  // ← Replace
-    projectId: 'gewichtskompass',
-    storageBucket: 'gewichtskompass.appspot.com',
-    iosBundleId: 'de.gewichtskompass.app',
-  );
-}
-```
-
-> 💡 **Pro Tip:** Use `flutterfire configure` CLI to auto-generate `firebase_options.dart`:
-> ```bash
-> dart pub global activate flutterfire_cli
-> flutterfire configure
-> ```
-
----
-
-## 📂 Project Structure
+## 📂 Projektstruktur
 
 ```
 lib/
-├── main.dart                          # App entry point
+├── main.dart                    # App-Einstiegspunkt
 ├── config/
-│   ├── theme/
-│   │   ├── app_colors.dart            # 🎨 Color palette (light + dark)
-│   │   ├── app_typography.dart        # 🔤 Inter + Cairo font scale
-│   │   ├── app_spacing.dart           # 📐 4px base spacing system
-│   │   └── app_theme.dart             # 🌗 ThemeData (light + dark)
-│   ├── router/
-│   │   └── app_router.dart            # 🧭 go_router + ShellRoute
-│   ├── localization/
-│   │   └── app_localizations.dart     # 🌍 de + ar locale logic
-│   └── firebase/
-│       └── firebase_options.dart      # 🔥 Firebase config + schema docs
+│   ├── firebase/                # Firebase-Konfiguration
+│   ├── localization/            # Internationalisierung (DE, AR)
+│   ├── router/                  # Navigation & Routing
+│   └── theme/                   # Design-System (Colors, Typography, Spacing)
 ├── core/
-│   ├── constants/
-│   │   └── app_constants.dart         # ⚙️ App-wide constants
-│   ├── widgets/
-│   │   └── app_widgets.dart           # 🧩 PremiumCard, PremiumButton, etc.
-│   └── providers/
-│       └── app_providers.dart         # 🔄 Riverpod providers
+│   ├── constants/               # App-Konstanten
+│   ├── errors/                  # Fehlerbehandlung
+│   ├── extensions/              # Dart-Erweiterungen
+│   ├── network/                 # Netzwerk-Utilities
+│   ├── providers/               # State-Management Provider
+│   ├── utils/                   # Hilfsfunktionen
+│   └── widgets/                 # Wiederverwendbare Widgets
 ├── data/
-│   ├── models/
-│   │   └── models.dart                # 📦 Firestore data models
-│   ├── repositories/                  # 🗄️ Repository implementations
-│   ├── datasources/                   # 🔌 Remote + local data sources
-│   └── mappers/                       # 🔄 Entity ↔ Model mappers
+│   ├── datasources/             # Datenquellen
+│   ├── mappers/                 # DTO-Mapper
+│   ├── models/                  # Datenmodelle
+│   └── repositories/            # Repository-Implementierungen
 ├── domain/
-│   ├── entities/
-│   │   ├── user_profile.dart          # 👤 User entity
-│   │   └── weight_entry.dart          # ⚖️ Weight entry entity
-│   ├── repositories/
-│   │   └── repositories.dart          # 📋 Repository interfaces
-│   └── usecases/
-│       └── health_calculations.dart   # 🧮 BMI, TDEE, insights
+│   ├── entities/                # Domänen-Entitäten
+│   ├── repositories/            # Repository-Interfaces
+│   └── usecases/                # Geschäftslogik
 ├── features/
-│   ├── splash/                        # 🚀 Splash screen
-│   ├── onboarding/                    # 📋 Multi-step onboarding
-│   ├── auth/                          # 🔐 Login + Signup
-│   ├── home/                          # 🏠 Premium dashboard
-│   ├── progress/                      # 📈 Progress overview
-│   ├── log/                           # ➕ Central logging hub
-│   ├── habits/                        # ✅ Habit tracking
-│   ├── profile/                       # 👤 Profile & settings
-│   ├── weight/                        # ⚖️ Weight entry
-│   ├── measurements/                  # 📏 Body measurements
-│   ├── meals/                         # 🍽️ Meal logging
-│   ├── water/                         # 💧 Water tracking
-│   ├── workout/                       # 🏋️ Workout logging
-│   ├── analytics/                     # 📊 Charts & insights
-│   ├── settings/                      # ⚙️ App settings
-│   └── static/                        # 📄 About, Privacy, Terms
+│   ├── splash/                  # Startbildschirm
+│   ├── onboarding/              # Einführung
+│   ├── auth/                    # Anmeldung & Registrierung
+│   ├── home/                    # Hauptbildschirm
+│   ├── weight/                  # Gewichtsverfolgung
+│   ├── measurements/            # Körpermaße
+│   ├── meals/                   # Ernährung
+│   ├── water/                   # Wasser-Tracking
+│   ├── workout/                 # Training
+│   ├── habits/                  # Gewohnheiten
+│   ├── analytics/               # Analyse & Insights
+│   ├── progress/                # Fortschritt
+│   ├── log/                     # Aktivitätsprotokoll
+│   ├── profile/                 # Benutzerprofil
+│   ├── settings/                # Einstellungen
+│   └── static/                  # Statische Seiten
 └── l10n/
-    ├── app_de.arb                     # 🇩🇪 German strings (189 keys)
-    └── app_ar.arb                     # 🇸🇦 Arabic strings
+    ├── app_de.arb               # Deutsche Übersetzung
+    └── app_ar.arb               # Arabische Übersetzung
 ```
 
 ---
 
-## 🎨 Design System
+## 🍎 In Xcode öffnen
 
-### Color Palette
+Da FormWerk ein Flutter-Projekt ist, wird der „Open with Xcode"-Button auf GitHub **nicht** unterstützt. So öffnest du das Projekt in Xcode:
 
-| Role | Light | Dark | Hex |
-|------|-------|------|-----|
-| **Primary** | 🟢 | 🟢 | `#2D6A4F` |
-| **Primary Light** | 🟢 | — | `#40916C` |
-| **Primary Dark** | 🟢 | — | `#1B4332` |
-| **Accent** | 🟠 | 🟠 | `#E76F51` |
-| **Accent Light** | 🟡 | — | `#F4A261` |
-| **Error** | 🔴 | 🔴 | `#E63946` |
-| **Info** | 🔵 | 🔵 | `#457B9D` |
-| **Background** | ⬜ | ⬛ | `#FAFBFC` / `#0F1114` |
-| **Surface** | ⬜ | ⬛ | `#FFFFFF` / `#1A1D21` |
-
-### Typography
-
-| Font | Usage | Weights |
-|------|-------|---------|
-| **Inter** | Latin text (DE, EN) | Thin → Black (100–900) |
-| **Cairo** | Arabic text (AR) | Light → Bold (300–700) |
-
-### Spacing System
-
-Base unit: **4px**
-
-```
-4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48
-```
-
-### Border Radius
-
-```
-8 · 12 · 16 · 20 · 24
-```
-
----
-
-## 🌍 Localization
-
-| Code | Language | Direction | Font | Status |
-|------|----------|-----------|------|--------|
-| `de` | Deutsch | LTR ← | Inter | ✅ Complete (189 strings) |
-| `ar` | العربية | RTL → | Cairo | ✅ Complete |
-
-### Adding a New Language
-
-1. Create `lib/l10n/app_<locale>.arb` with all 189 string keys
-2. Add the locale to `AppLocalizations.supportedLocales`
-3. Run `flutter gen-l10n`
-4. Add font support in `pubspec.yaml` if needed
-
----
-
-## 🗄️ Firestore Schema
-
-All data is stored under `users/{userId}/` subcollections:
-
-<details>
-<summary>📋 View Full Schema</summary>
-
-```
-users/{userId}
-  uid, email, displayName, photoUrl
-  gender, age, heightCm, currentWeightKg, targetWeightKg
-  activityLevel, goal, unitSystem, dietaryPreference
-  dailyCalorieTarget, dailyWaterGoalMl
-  locale, themeMode, createdAt, updatedAt
-
-users/{userId}/weights/{entryId}
-  date, weightKg, note, createdAt
-
-users/{userId}/body_measurements/{entryId}
-  date, waistCm, chestCm, hipsCm, armsCm, thighsCm, neckCm
-  bodyFatPercent, createdAt
-
-users/{userId}/meals/{entryId}
-  date, mealType, name, caloriesKcal
-  proteinG, carbsG, fatG, isFavorite, createdAt
-
-users/{userId}/water_logs/{entryId}
-  date, amountMl, createdAt
-
-users/{userId}/workouts/{entryId}
-  date, category, durationMin, caloriesBurned, notes, createdAt
-
-users/{userId}/habits/{habitId}
-  name, iconKey, isActive, createdAt
-
-users/{userId}/habit_logs/{logId}
-  habitId, date, isCompleted
-
-users/{userId}/notification_settings/{id}
-  weightReminder, waterReminder, mealReminder, workoutReminder
-  motivationReminder, streakReminder
-  weightReminderTime, waterReminderIntervalMin
-
-users/{userId}/app_settings/{id}
-  locale, themeMode, unitSystem, onboardingCompleted
-```
-
-</details>
-
----
-
-## 🧪 Testing
+### Methode 1: Über das Terminal (Empfohlen)
 
 ```bash
-# Run all unit & widget tests
-flutter test
-
-# Run with coverage
-flutter test --coverage
-
-# Run integration tests
-flutter test integration_test/
-
-# Run a specific test file
-flutter test test/unit/health_calculations_test.dart
+cd FormWerk
+open ios/Runner.xcworkspace
 ```
 
----
-
-## 🛠️ Useful Commands
+### Methode 2: Über Flutter
 
 ```bash
-# Clean build artifacts
-flutter clean
+flutter build ios --no-codesign   # Projekt vorbereiten
+open ios/Runner.xcworkspace       # In Xcode öffnen
+```
 
-# Rebuild everything from scratch
-flutter clean && flutter pub get && flutter gen-l10n
+### Methode 3: Manuell in Xcode
 
-# Regenerate code (freezed, json_serializable, etc.)
-dart run build_runner build --delete-conflicting-outputs
+1. Xcode öffnen
+2. **File → Open**
+3. Zum Ordner `FormWerk/ios/` navigieren
+4. `Runner.xcworkspace` auswählen (⚠️ **nicht** `.xcodeproj`)
 
-# Watch for code generation changes
-dart run build_runner watch --delete-conflicting-outputs
+> **Wichtig:** Immer die `.xcworkspace`-Datei öffnen, da sie die CocoaPods-Integration enthält.
 
-# Check for dependency issues
-flutter pub outdated
+---
 
-# Analyze code for issues
-flutter analyze
+## 🌍 Internationalisierung
 
-# Format code
-dart format lib/ test/
+FormWerk unterstützt mehrere Sprachen:
 
-# Run on specific device
-flutter devices                    # List all devices
-flutter run -d <device-id>        # Run on specific device
-flutter run -d all                # Run on all connected devices
+| Sprache | Code | Status |
+|---------|------|--------|
+| 🇩🇪 Deutsch | `de` | ✅ Vollständig |
+| 🇸🇦 العربيّة | `ar` | ✅ Vollständig |
+
+Neue Übersetzungen in `lib/l10n/app_XX.arb` hinzufügen.
+
+---
+
+## 🛠️ Technologie-Stack
+
+| Kategorie | Technologie |
+|-----------|-------------|
+| **Framework** | Flutter 3.29+ |
+| **Sprache** | Dart 3.7+ |
+| **State Management** | Provider / Riverpod |
+| **Backend** | Firebase (Auth, Firestore, Analytics, Crashlytics, Messaging) |
+| **Lokale DB** | Sqflite |
+| **Architektur** | Clean Architecture (Domain → Data → Presentation) |
+| **Design** | Material 3, Custom Design System |
+| **CI/CD** | GitHub Actions (geplant) |
+
+---
+
+## 📦 Build
+
+### iOS (Release)
+
+```bash
+flutter build ios --no-codesign
+```
+
+### Android (Release)
+
+```bash
+flutter build apk --release
+# oder
+flutter build appbundle --release
 ```
 
 ---
 
-## 🗺️ App Navigation Flow
+## 🤝 Mitwirken
 
-```
-Splash → Onboarding → Login/Signup → Home (authenticated)
-                                          │
-                    ┌─────────────────────┼─────────────────────┐
-                    │                     │                     │
-               Progress               Log (+)              Profile
-                    │              │  │  │  │  │               │
-                    │              │  │  │  │  │          Settings
-                    │              │  │  │  │  │          │  │  │
-               Analytics     Weight Meal Water Workout   Theme Lang Notif
-               Insights      Measure
-```
+1. Repository forken
+2. Feature-Branch erstellen (`git checkout -b feature/amazing-feature`)
+3. Änderungen committen (`git commit -m 'Add amazing feature'`)
+4. Branch pushen (`git push origin feature/amazing-feature`)
+5. Pull Request erstellen
 
 ---
 
-## 🔮 Roadmap
+## 📄 Lizenz
 
-- [ ] 📱 Barcode scanning for meal logging
-- [ ] 🤖 AI-powered health coach
-- [ ] ⌚ Apple Health & Google Fit integration
-- [ ] 💎 Premium subscriptions (in-app purchases)
-- [ ] 🥗 Nutrition API integration (Open Food Facts)
-- [ ] 📊 Export data as PDF/CSV
-- [ ] 🏆 Achievements & gamification
-- [ ] 👥 Social features (friends, challenges)
-- [ ] 📸 Progress photos with comparison
-- [ ] 🍽️ Recipe suggestions based on dietary preferences
+Dieses Projekt steht unter der MIT-Lizenz. Siehe [LICENSE](LICENSE) für Details.
 
 ---
 
-## 🤝 Contributing
+## 👨‍💻 Autor
 
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-Proprietary — © 2026 GewichtsKompass. All rights reserved.
+**mgrd281** – [GitHub](https://github.com/mgrd281)
 
 ---
 
 <div align="center">
 
-**Built with ❤️ using Flutter**
-
-[⬆ Back to Top](#-gewichtskompass)
+**FormWerk** – Dein Körper, dein Kompass. 🧭
 
 </div>

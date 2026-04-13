@@ -22,9 +22,10 @@ import '../theme/app_colors.dart';
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _shellNavigatorKey = GlobalKey<NavigatorState>();
 
-final appRouter = GoRouter(
+GoRouter createAppRouter(String initialLocation) {
+  return GoRouter(
   navigatorKey: _rootNavigatorKey,
-  initialLocation: '/splash',
+  initialLocation: initialLocation,
   debugLogDiagnostics: true,
   routes: [
     // Splash
@@ -104,3 +105,4 @@ final appRouter = GoRouter(
     GoRoute(path: '/terms', builder: (context, state) => const TermsScreen()),
   ],
 );
+}

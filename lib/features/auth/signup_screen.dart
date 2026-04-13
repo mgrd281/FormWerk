@@ -55,7 +55,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   icon: const Icon(Icons.arrow_back),
                 ),
                 const SizedBox(height: AppSpacing.lg),
-                Text(l10n.createAccount, style: AppTypography.headline2),
+                Text(l10n.createAccount, style: AppTypography.headlineMedium),
                 const SizedBox(height: AppSpacing.xs),
                 Text(l10n.createAccountDesc, style: AppTypography.bodyMedium.copyWith(
                   color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),

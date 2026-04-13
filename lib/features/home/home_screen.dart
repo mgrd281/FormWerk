@@ -54,7 +54,7 @@ class HomeScreen extends ConsumerWidget {
                             color: Colors.white.withValues(alpha: 0.8),
                           )),
                           const SizedBox(height: 4),
-                          Text(l10n.appName, style: AppTypography.headline3.copyWith(
+                          Text(l10n.appName, style: AppTypography.headlineSmall.copyWith(
                             color: Colors.white,
                           )),
                         ],
@@ -86,7 +86,7 @@ class HomeScreen extends ConsumerWidget {
                           children: [
                             Text(
                               stats.currentWeight.toStringAsFixed(1),
-                              style: AppTypography.headline5.copyWith(
+                              style: AppTypography.titleLarge.copyWith(
                                 color: Colors.white, fontWeight: FontWeight.w700,
                               ),
                             ),
@@ -316,7 +316,7 @@ class HomeScreen extends ConsumerWidget {
                       AppColors.accent.withValues(alpha: 0.05),
                     ],
                   ),
-                  borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
+                  borderRadius: BorderRadius.circular(AppRadius.lg),
                   border: Border.all(color: AppColors.primary.withValues(alpha: 0.12)),
                 ),
                 child: Row(
@@ -325,7 +325,7 @@ class HomeScreen extends ConsumerWidget {
                       padding: const EdgeInsets.all(AppSpacing.sm),
                       decoration: BoxDecoration(
                         color: AppColors.primary.withValues(alpha: 0.12),
-                        borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+                        borderRadius: BorderRadius.circular(AppRadius.md),
                       ),
                       child: const Icon(Icons.lightbulb_outline, color: AppColors.primary, size: 24),
                     ),

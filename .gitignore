@@ -5,9 +5,11 @@
 *.swp
 .DS_Store
 .atom/
+.build/
 .buildlog/
 .history
 .svn/
+.swiftpm/
 migrate_working_dir/
 
 # IntelliJ related
@@ -35,6 +37,12 @@ android/.gradle/
 .pub-cache/
 .pub/
 /build/
+**/local.properties
+.metadata
+
+# iOS/Pods
+ios/Pods/
+ios/.symlinks/
 
 # Symbolication related
 app.*.symbols

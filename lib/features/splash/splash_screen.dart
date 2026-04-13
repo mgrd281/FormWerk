@@ -89,7 +89,7 @@ class _SplashScreenState extends State<SplashScreen>
               const SizedBox(height: AppSpacing.lg),
               Text(
                 'GewichtsKompass',
-                style: AppTypography.headline2.copyWith(
+                style: AppTypography.headlineMedium.copyWith(
                   color: Colors.white,
                   letterSpacing: -0.5,
                 ),

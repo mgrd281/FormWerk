@@ -20,7 +20,7 @@ class LogScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(l10n.logAction, style: AppTypography.headline4.copyWith(
+            Text(l10n.logAction, style: AppTypography.headlineSmall.copyWith(
               color: theme.colorScheme.onSurface,
             )),
             const SizedBox(height: AppSpacing.sm),
@@ -97,7 +97,7 @@ class _LogActionCard extends StatelessWidget {
             width: 52, height: 52,
             decoration: BoxDecoration(
               color: color.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+              borderRadius: BorderRadius.circular(AppRadius.md),
             ),
             child: Icon(icon, size: 24, color: color),
           ),

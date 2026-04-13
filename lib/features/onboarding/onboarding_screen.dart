@@ -114,7 +114,7 @@ class _WelcomeStep extends StatelessWidget {
             child: const Icon(Icons.explore_rounded, size: 60, color: AppColors.primary),
           ),
           const SizedBox(height: AppSpacing.xl),
-          Text(l10n.onboardingWelcome, style: AppTypography.headline2, textAlign: TextAlign.center),
+          Text(l10n.onboardingWelcome, style: AppTypography.headlineMedium, textAlign: TextAlign.center),
           const SizedBox(height: AppSpacing.md),
           Text(l10n.onboardingWelcomeDesc, style: AppTypography.bodyMedium.copyWith(
             color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
@@ -138,7 +138,7 @@ class _GoalStep extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(l10n.onboardingGoal, style: AppTypography.headline3),
+          Text(l10n.onboardingGoal, style: AppTypography.headlineSmall),
           const SizedBox(height: AppSpacing.sm),
           Text(l10n.onboardingGoalDesc, style: AppTypography.bodyMedium.copyWith(
             color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
@@ -175,13 +175,13 @@ class _GoalOption extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
+      borderRadius: BorderRadius.circular(AppRadius.lg),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.all(AppSpacing.lg),
         decoration: BoxDecoration(
           color: isSelected ? AppColors.primary.withValues(alpha: 0.08) : Colors.transparent,
-          borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
+          borderRadius: BorderRadius.circular(AppRadius.lg),
           border: Border.all(
             color: isSelected ? AppColors.primary : Theme.of(context).colorScheme.outline.withValues(alpha: 0.2),
             width: isSelected ? 2 : 1,
@@ -215,7 +215,7 @@ class _PersonalStep extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(l10n.onboardingPersonal, style: AppTypography.headline3),
+          Text(l10n.onboardingPersonal, style: AppTypography.headlineSmall),
           const SizedBox(height: AppSpacing.xl),
           // Gender selection
           Text(l10n.gender, style: AppTypography.bodySmall.copyWith(fontWeight: FontWeight.w600)),
@@ -279,7 +279,7 @@ class _ActivityStep extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(l10n.onboardingActivity, style: AppTypography.headline3),
+          Text(l10n.onboardingActivity, style: AppTypography.headlineSmall),
           const SizedBox(height: AppSpacing.sm),
           Text(l10n.onboardingActivityDesc, style: AppTypography.bodyMedium.copyWith(
             color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
@@ -321,7 +321,7 @@ class _PreferencesStep extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(l10n.onboardingPreferences, style: AppTypography.headline3),
+          Text(l10n.onboardingPreferences, style: AppTypography.headlineSmall),
           const SizedBox(height: AppSpacing.xl),
           Text(l10n.unitSystem, style: AppTypography.bodySmall.copyWith(fontWeight: FontWeight.w600)),
           const SizedBox(height: AppSpacing.sm),

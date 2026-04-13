@@ -63,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: AppSpacing.xl),
                 Center(
-                  child: Text(l10n.welcomeBack, style: AppTypography.headline2),
+                  child: Text(l10n.welcomeBack, style: AppTypography.headlineMedium),
                 ),
                 const SizedBox(height: AppSpacing.xs),
                 Center(

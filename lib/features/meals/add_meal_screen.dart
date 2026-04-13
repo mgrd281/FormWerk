@@ -83,7 +83,7 @@ class _MealTypeChip extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md, vertical: AppSpacing.sm),
         decoration: BoxDecoration(
           color: selected ? AppColors.accent.withValues(alpha: 0.1) : Theme.of(context).colorScheme.surface,
-          borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+          borderRadius: BorderRadius.circular(AppRadius.md),
           border: Border.all(color: selected ? AppColors.accent : Theme.of(context).colorScheme.outline.withValues(alpha: 0.2)),
         ),
         child: Row(children: [

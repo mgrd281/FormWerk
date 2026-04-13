@@ -40,7 +40,7 @@ class HabitsScreen extends StatelessWidget {
                 Expanded(child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(l10n.habitsToday, style: AppTypography.headline5),
+                    Text(l10n.habitsToday, style: AppTypography.titleLarge),
                     const SizedBox(height: 4),
                     Text(
                       completed == habits.length ? l10n.allHabitsDone : l10n.keepGoing,
