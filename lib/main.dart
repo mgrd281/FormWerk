@@ -4,11 +4,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:go_router/go_router.dart';
-import 'package:firebase_core/firebase_core.dart';
+// Firebase imports - commented out until real credentials are configured
+// import 'package:firebase_core/firebase_core.dart';
+// import 'config/firebase/firebase_options.dart';
 import 'config/theme/app_theme.dart';
 import 'config/router/app_router.dart';
 import 'config/localization/app_localizations.dart';
-import 'config/firebase/firebase_options.dart';
 import 'core/providers/app_providers.dart';
 import 'features/splash/splash_screen.dart';
 
@@ -36,17 +37,14 @@ void main() {
 
       WidgetsFlutterBinding.ensureInitialized();
 
-      // Initialize Firebase safely – won't crash if config is invalid
-      try {
-        await Firebase.initializeApp(
-          options: DefaultFirebaseOptions.currentPlatform,
-        );
-        firebaseInitialized = true;
-        debugPrint('✅ Firebase initialized successfully');
-      } catch (e) {
-        firebaseInitialized = false;
-        debugPrint('⚠️ Firebase initialization failed (app will run in offline mode): $e');
-      }
+      // Firebase is currently disabled – running in offline/local mode
+      // To enable Firebase:
+      // 1. Add real credentials to lib/config/firebase/firebase_options.dart
+      // 2. Add real GoogleService-Info.plist to ios/Runner/
+      // 3. Uncomment Firebase imports and initialization code above
+      firebaseInitialized = false;
+      debugPrint('ℹ️ Running in offline mode (Firebase not configured)');
+      debugPrint('ℹ️ To enable Firebase, see lib/config/firebase/firebase_options.dart');
 
       // Lock orientation to portrait
       SystemChrome.setPreferredOrientations([
