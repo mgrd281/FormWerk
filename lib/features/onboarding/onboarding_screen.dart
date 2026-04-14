@@ -1,6 +1,9 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart';
 import '../../config/theme/app_colors.dart';
 import '../../config/theme/app_typography.dart';
 import '../../config/theme/app_spacing.dart';
@@ -8,6 +11,7 @@ import '../../config/localization/app_localizations.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/widgets/app_widgets.dart';
 import '../../domain/entities/user_profile.dart';
+import '../../data/datasources/local_storage.dart';
 
 class OnboardingScreen extends ConsumerWidget {
   const OnboardingScreen({super.key});
@@ -63,12 +67,12 @@ class OnboardingScreen extends ConsumerWidget {
                   Expanded(
                     child: PremiumButton(
                       label: state.step < 4 ? l10n.next : l10n.getStarted,
-                      onPressed: () {
+                      onPressed: () async {
                         if (state.step < 4) {
                           ref.read(onboardingProvider.notifier).nextStep();
                         } else {
                           // Complete onboarding
-                          context.go('/home');
+                          await _completeOnboarding(context, ref, state);
                         }
                       },
                     ),
@@ -90,6 +94,58 @@ class OnboardingScreen extends ConsumerWidget {
       case 3: return _ActivityStep(ref: ref, state: state, l10n: l10n);
       case 4: return _PreferencesStep(ref: ref, state: state, l10n: l10n);
       default: return _WelcomeStep(l10n: l10n);
+    }
+  }
+
+  Future<void> _completeOnboarding(BuildContext context, WidgetRef ref, OnboardingState state) async {
+    try {
+      debugPrint('Starting onboarding completion...');
+      
+      // Create a user profile from onboarding data
+      final userProfile = UserProfile(
+        id: 'user_${DateTime.now().millisecondsSinceEpoch}',
+        gender: state.gender,
+        age: state.age,
+        height: state.height,
+        currentWeight: state.currentWeight,
+        targetWeight: state.targetWeight,
+        goal: state.goal,
+        activityLevel: state.activityLevel,
+        unitSystem: state.unitSystem,
+        dietaryPreference: state.dietaryPreference,
+        isOnboarded: true,
+        preferredLanguage: 'de',
+        createdAt: DateTime.now(),
+        updatedAt: DateTime.now(),
+      );
+
+      debugPrint('User profile created: ${userProfile.toJson()}');
+      
+      // Save to local storage
+      await LocalStorage.saveUserProfile(userProfile);
+      debugPrint('User profile saved to local storage');
+      
+      // Update provider state
+      ref.read(userProfileProvider.notifier).state = userProfile;
+      ref.read(authProvider.notifier).setAuthenticated(userProfile);
+      
+      debugPrint('Onboarding completed successfully');
+      
+      // Navigate to home
+      if (context.mounted) {
+        context.go('/home');
+      }
+    } catch (e) {
+      debugPrint('Error completing onboarding: $e');
+      // Show error message
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Fehler beim Speichern: $e'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
     }
   }
 }

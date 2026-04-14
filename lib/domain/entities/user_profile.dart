@@ -132,4 +132,50 @@ class UserProfile extends Equatable {
         currentWeight, targetWeight, goal, activityLevel, unitSystem,
         dietaryPreference, isOnboarded, preferredLanguage, createdAt, updatedAt,
       ];
+
+  /// Convert to JSON for serialization
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'email': email,
+      'displayName': displayName,
+      'photoUrl': photoUrl,
+      'gender': gender.name,
+      'age': age,
+      'height': height,
+      'currentWeight': currentWeight,
+      'targetWeight': targetWeight,
+      'goal': goal.name,
+      'activityLevel': activityLevel.name,
+      'unitSystem': unitSystem.name,
+      'dietaryPreference': dietaryPreference.name,
+      'isOnboarded': isOnboarded,
+      'preferredLanguage': preferredLanguage,
+      'createdAt': createdAt.toIso8601String(),
+      'updatedAt': updatedAt.toIso8601String(),
+    };
+  }
+
+  /// Create from JSON
+  static UserProfile fromJson(Map<String, dynamic> json) {
+    return UserProfile(
+      id: json['id'] as String,
+      email: json['email'] as String?,
+      displayName: json['displayName'] as String?,
+      photoUrl: json['photoUrl'] as String?,
+      gender: Gender.values.firstWhere((e) => e.name == json['gender'], orElse: () => Gender.male),
+      age: json['age'] as int,
+      height: (json['height'] as num).toDouble(),
+      currentWeight: (json['currentWeight'] as num).toDouble(),
+      targetWeight: (json['targetWeight'] as num).toDouble(),
+      goal: WeightGoal.values.firstWhere((e) => e.name == json['goal'], orElse: () => WeightGoal.lose),
+      activityLevel: ActivityLevel.values.firstWhere((e) => e.name == json['activityLevel'], orElse: () => ActivityLevel.moderate),
+      unitSystem: UnitSystem.values.firstWhere((e) => e.name == json['unitSystem'], orElse: () => UnitSystem.metric),
+      dietaryPreference: DietaryPreference.values.firstWhere((e) => e.name == json['dietaryPreference'], orElse: () => DietaryPreference.none),
+      isOnboarded: json['isOnboarded'] as bool,
+      preferredLanguage: json['preferredLanguage'] as String,
+      createdAt: DateTime.parse(json['createdAt'] as String),
+      updatedAt: DateTime.parse(json['updatedAt'] as String),
+    );
+  }
 }

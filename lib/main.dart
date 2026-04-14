@@ -27,27 +27,39 @@ class GewichtsKompassApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     var themeMode = AppThemeMode.system;
     var locale = const Locale('de');
-    var authState = const AuthState(status: AuthStatus.unknown);
-
-    try {
-      themeMode = ref.watch(themeModeProvider);
-      locale = ref.watch(localeProvider);
-      authState = ref.watch(authProvider);
-    } catch (e) {
-      debugPrint('Provider watch failed: $e');
+    
+    // Watch app initialization
+    final initialization = ref.watch(appInitializationProvider);
+    
+    // Only watch auth provider after initialization
+    AuthState authState = const AuthState(status: AuthStatus.unknown);
+    if (!initialization.isLoading && initialization.hasValue) {
+      try {
+        themeMode = ref.watch(themeModeProvider);
+        locale = ref.watch(localeProvider);
+        authState = ref.watch(authProvider);
+      } catch (e) {
+        debugPrint('Provider watch failed: $e');
+      }
     }
 
     // Determine initial location based on auth state
     String initialLocation = '/splash';
-    switch (authState.status) {
-      case AuthStatus.authenticated:
-        initialLocation = '/home';
-      case AuthStatus.onboarding:
-        initialLocation = '/onboarding';
-      case AuthStatus.unauthenticated:
-        initialLocation = '/login';
-      case AuthStatus.unknown:
-        initialLocation = '/splash';
+    if (!initialization.isLoading && initialization.hasValue) {
+      switch (authState.status) {
+        case AuthStatus.authenticated:
+          initialLocation = '/home';
+          break;
+        case AuthStatus.onboarding:
+          initialLocation = '/onboarding';
+          break;
+        case AuthStatus.unauthenticated:
+          initialLocation = '/login';
+          break;
+        case AuthStatus.unknown:
+          initialLocation = '/splash';
+          break;
+      }
     }
 
     GoRouter router;

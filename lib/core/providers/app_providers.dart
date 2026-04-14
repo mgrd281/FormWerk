@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../domain/entities/user_profile.dart';
 import '../../domain/entities/weight_entry.dart';
 import '../../domain/usecases/health_calculations.dart';
+import '../../data/datasources/local_storage.dart';
 
 // ─── Theme Provider ────────────────────────────────────────────
 enum AppThemeMode { light, dark, system }
@@ -198,3 +199,43 @@ class OnboardingNotifier extends StateNotifier<OnboardingState> {
 
 // ─── Navigation Index Provider ─────────────────────────────────
 final navigationIndexProvider = StateProvider<int>((ref) => 0);
+
+// ─── App Initialization Provider ──────────────────────────────
+final appInitializationProvider = FutureProvider<void>((ref) async {
+  try {
+    debugPrint('Starting app initialization...');
+    
+    // Initialize LocalStorage
+    await LocalStorage.init();
+    debugPrint('LocalStorage initialized');
+    
+    // Load user profile
+    final userProfile = await LocalStorage.loadUserProfile();
+    if (userProfile != null) {
+      debugPrint('User profile loaded: ${userProfile.id}');
+      ref.read(userProfileProvider.notifier).state = userProfile;
+      
+      // Update auth state based on onboarding status
+      if (userProfile.isOnboarded) {
+        ref.read(authProvider.notifier).setAuthenticated(userProfile);
+        debugPrint('User is onboarded, setting authenticated state');
+      } else {
+        ref.read(authProvider.notifier).setAuthenticated(userProfile);
+        debugPrint('User needs onboarding');
+      }
+    } else {
+      debugPrint('No user profile found');
+      ref.read(authProvider.notifier).setUnauthenticated();
+    }
+    
+    // Load weight entries
+    final weightEntries = await LocalStorage.loadWeightEntries();
+    ref.read(weightEntriesProvider.notifier).state = weightEntries;
+    debugPrint('Loaded ${weightEntries.length} weight entries');
+    
+    debugPrint('App initialization completed successfully');
+  } catch (e) {
+    debugPrint('Error during app initialization: $e');
+    rethrow;
+  }
+});

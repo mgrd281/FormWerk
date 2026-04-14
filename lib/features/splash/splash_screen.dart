@@ -1,5 +1,8 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart';
 import '../../config/theme/app_colors.dart';
 import '../../config/theme/app_typography.dart';
 import '../../config/theme/app_spacing.dart';
@@ -35,9 +38,56 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   Future<void> _navigateNext() async {
+    // Add delay for splash animation
     await Future.delayed(const Duration(seconds: 2));
-    if (mounted) {
+    
+    if (!mounted) return;
+    
+    try {
+      // Check if user has completed onboarding
+      final isOnboarded = await _checkOnboardingStatus();
+      
+      if (isOnboarded) {
+        // User has completed onboarding, go to home
+        context.go('/home');
+      } else {
+        // User needs to complete onboarding
+        context.go('/onboarding');
+      }
+    } catch (e) {
+      // Fallback to onboarding if there's an error
+      debugPrint('Error checking onboarding status: $e');
       context.go('/onboarding');
+    }
+  }
+
+  Future<bool> _checkOnboardingStatus() async {
+    try {
+      // Initialize LocalStorage if needed
+      // Note: In a real app, LocalStorage.init() should be called in main()
+      // For now, we'll check the Hive box directly
+      final appDir = await getApplicationDocumentsDirectory();
+      final hivePath = appDir.path;
+      
+      // Check if Hive is initialized
+      if (!Hive.isBoxOpen('user_profile')) {
+        Hive.init(hivePath);
+        await Hive.openBox('user_profile');
+        await Hive.openBox('app_settings');
+      }
+      
+      final userBox = Hive.box('user_profile');
+      final settingsBox = Hive.box('app_settings');
+      
+      // Check both boxes for onboarding status
+      final isOnboarded = userBox.get('is_onboarded', defaultValue: false) ||
+                         settingsBox.get('is_onboarded', defaultValue: false);
+      
+      debugPrint('Onboarding status check: $isOnboarded');
+      return isOnboarded;
+    } catch (e) {
+      debugPrint('Error in _checkOnboardingStatus: $e');
+      return false;
     }
   }
 

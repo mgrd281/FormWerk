@@ -38,6 +38,28 @@ class WeightEntry extends Equatable {
 
   @override
   List<Object?> get props => [id, userId, weight, date, note, createdAt];
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'userId': userId,
+      'weight': weight,
+      'date': date.toIso8601String(),
+      'note': note,
+      'createdAt': createdAt.toIso8601String(),
+    };
+  }
+
+  factory WeightEntry.fromJson(Map<String, dynamic> json) {
+    return WeightEntry(
+      id: json['id'] as String,
+      userId: json['userId'] as String,
+      weight: (json['weight'] as num).toDouble(),
+      date: DateTime.parse(json['date'] as String),
+      note: json['note'] as String?,
+      createdAt: DateTime.parse(json['createdAt'] as String),
+    );
+  }
 }
 
 /// Body measurement entity
