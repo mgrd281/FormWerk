@@ -1,0 +1,235 @@
+{
+  "app": {
+    "name": "FlowForge",
+    "tagline": "Workflow-Automatisierung der nächsten Generation",
+    "description": "Erstelle, plane und automatisiere komplexe Workflows mit visuellen Bausteinen."
+  },
+  "common": {
+    "save": "Speichern",
+    "saving": "Wird gespeichert…",
+    "saved": "Gespeichert",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "deleting": "Wird gelöscht…",
+    "edit": "Bearbeiten",
+    "create": "Erstellen",
+    "creating": "Wird erstellt…",
+    "duplicate": "Duplizieren",
+    "rename": "Umbenennen",
+    "search": "Suchen",
+    "searchPlaceholder": "Suchen…",
+    "loading": "Wird geladen…",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "back": "Zurück",
+    "next": "Weiter",
+    "continue": "Fortfahren",
+    "confirm": "Bestätigen",
+    "close": "Schließen",
+    "retry": "Erneut versuchen",
+    "tryAgain": "Erneut versuchen",
+    "open": "Öffnen",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "submit": "Absenden",
+    "yes": "Ja",
+    "no": "Nein",
+    "more": "Mehr",
+    "less": "Weniger",
+    "all": "Alle",
+    "none": "Keine",
+    "filter": "Filtern",
+    "sort": "Sortieren",
+    "view": "Ansicht",
+    "actions": "Aktionen",
+    "settings": "Einstellungen",
+    "logout": "Abmelden",
+    "language": "Sprache",
+    "theme": "Design",
+    "themeDark": "Dunkel",
+    "themeLight": "Hell",
+    "themeSystem": "System",
+    "optional": "Optional",
+    "required": "Erforderlich",
+    "comingSoon": "Bald verfügbar"
+  },
+  "auth": {
+    "signIn": "Anmelden",
+    "signUp": "Registrieren",
+    "signOut": "Abmelden",
+    "signInTitle": "Willkommen zurück",
+    "signInSubtitle": "Melde dich an, um auf deine Workflows zuzugreifen",
+    "signUpTitle": "Konto erstellen",
+    "signUpSubtitle": "Beginne mit der Automatisierung in Minuten",
+    "email": "E-Mail",
+    "emailPlaceholder": "du@beispiel.de",
+    "password": "Passwort",
+    "magicLink": "Magic Link",
+    "sendMagicLink": "Magic Link senden",
+    "magicLinkSent": "Wir haben dir einen Anmeldelink an {email} gesendet.",
+    "magicLinkInstructions": "Klicke auf den Link in der E-Mail, um dich anzumelden. Der Link ist 24 Stunden gültig.",
+    "checkInbox": "Postfach prüfen",
+    "googleContinue": "Mit Google fortfahren",
+    "githubContinue": "Mit GitHub fortfahren",
+    "or": "oder",
+    "termsAgreement": "Mit der Anmeldung stimmst du unseren {terms} und {privacy} zu.",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutz",
+    "alreadyHaveAccount": "Bereits ein Konto?",
+    "noAccount": "Noch kein Konto?",
+    "forgotPassword": "Passwort vergessen?",
+    "resendEmail": "E-Mail erneut senden",
+    "errors": {
+      "invalidEmail": "Ungültige E-Mail-Adresse",
+      "emailRequired": "E-Mail ist erforderlich",
+      "sendFailed": "Senden fehlgeschlagen. Bitte erneut versuchen."
+    }
+  },
+  "nav": {
+    "dashboard": "Übersicht",
+    "workflows": "Workflows",
+    "connections": "Verbindungen",
+    "executions": "Ausführungen",
+    "templates": "Vorlagen",
+    "settings": "Einstellungen",
+    "billing": "Abrechnung",
+    "team": "Team",
+    "apiKeys": "API-Schlüssel",
+    "help": "Hilfe",
+    "docs": "Dokumentation"
+  },
+  "dashboard": {
+    "title": "Übersicht",
+    "welcome": "Willkommen zurück, {name}",
+    "stats": {
+      "workflows": "Workflows",
+      "executions": "Ausführungen",
+      "successRate": "Erfolgsrate",
+      "activeNow": "Aktiv jetzt"
+    },
+    "recentExecutions": "Letzte Ausführungen",
+    "viewAll": "Alle anzeigen"
+  },
+  "workflows": {
+    "title": "Workflows",
+    "subtitle": "Erstelle und verwalte deine Automatisierungen",
+    "create": "Workflow erstellen",
+    "createNew": "Neuen Workflow erstellen",
+    "name": "Name",
+    "namePlaceholder": "Mein Workflow",
+    "description": "Beschreibung",
+    "descriptionPlaceholder": "Was macht dieser Workflow?",
+    "status": "Status",
+    "lastRun": "Letzte Ausführung",
+    "neverRun": "Noch nie ausgeführt",
+    "executionsCount": "{count, plural, =0 {Keine Ausführungen} =1 {# Ausführung} other {# Ausführungen}}",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "draft": "Entwurf",
+    "empty": {
+      "title": "Noch keine Workflows",
+      "description": "Erstelle deinen ersten Workflow, um die Automatisierung zu starten",
+      "cta": "Ersten Workflow erstellen"
+    },
+    "delete": {
+      "title": "Workflow löschen?",
+      "description": "Diese Aktion kann nicht rückgängig gemacht werden. Der Workflow „{name}“ und alle seine Ausführungen werden dauerhaft gelöscht.",
+      "confirm": "Endgültig löschen"
+    },
+    "limits": {
+      "freeReached": "Du hast das kostenlose Limit von 3 Workflows erreicht. Aktualisiere für mehr."
+    }
+  },
+  "connections": {
+    "title": "Verbindungen",
+    "subtitle": "Verwalte deine Anmeldedaten und Integrationen",
+    "create": "Verbindung hinzufügen",
+    "type": "Typ",
+    "name": "Name",
+    "createdAt": "Erstellt am",
+    "empty": {
+      "title": "Noch keine Verbindungen",
+      "description": "Verbinde deine Konten, um sie in Workflows zu nutzen",
+      "cta": "Erste Verbindung hinzufügen"
+    }
+  },
+  "executions": {
+    "title": "Ausführungen",
+    "subtitle": "Verlauf und Logs aller Workflow-Läufe",
+    "status": {
+      "queued": "In Warteschlange",
+      "running": "Läuft",
+      "success": "Erfolgreich",
+      "failed": "Fehlgeschlagen",
+      "cancelled": "Abgebrochen"
+    },
+    "trigger": {
+      "manual": "Manuell",
+      "schedule": "Zeitplan",
+      "webhook": "Webhook"
+    },
+    "duration": "Dauer",
+    "startedAt": "Gestartet",
+    "finishedAt": "Beendet",
+    "viewLogs": "Logs anzeigen",
+    "retry": "Erneut ausführen",
+    "empty": {
+      "title": "Noch keine Ausführungen",
+      "description": "Führe einen Workflow aus, um den Verlauf hier zu sehen"
+    }
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "profile": {
+      "title": "Profil",
+      "name": "Name",
+      "email": "E-Mail",
+      "avatar": "Avatar"
+    },
+    "preferences": {
+      "title": "Präferenzen",
+      "language": "Sprache",
+      "theme": "Design",
+      "timezone": "Zeitzone"
+    },
+    "billing": {
+      "title": "Abrechnung",
+      "currentPlan": "Aktueller Plan",
+      "upgrade": "Upgrade",
+      "free": "Kostenlos",
+      "pro": "Pro",
+      "team": "Team",
+      "enterprise": "Enterprise"
+    },
+    "apiKeys": {
+      "title": "API-Schlüssel",
+      "create": "Schlüssel erstellen",
+      "name": "Name",
+      "lastUsed": "Zuletzt verwendet",
+      "copyWarning": "Kopiere den Schlüssel jetzt — er wird nicht erneut angezeigt."
+    },
+    "danger": {
+      "title": "Gefahrenbereich",
+      "deleteAccount": "Konto löschen",
+      "deleteAccountConfirm": "Bist du sicher? Alle Daten werden dauerhaft gelöscht."
+    }
+  },
+  "errors": {
+    "generic": "Etwas ist schiefgelaufen",
+    "genericDescription": "Bitte versuche es erneut. Falls das Problem weiterhin besteht, kontaktiere den Support.",
+    "notFound": "Seite nicht gefunden",
+    "notFoundDescription": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "goHome": "Zur Startseite",
+    "unauthorized": "Nicht autorisiert",
+    "forbidden": "Zugriff verweigert",
+    "rateLimited": "Zu viele Anfragen. Bitte warte einen Moment.",
+    "networkError": "Netzwerkfehler. Verbindung prüfen."
+  },
+  "validation": {
+    "required": "Dieses Feld ist erforderlich",
+    "email": "Ungültige E-Mail-Adresse",
+    "minLength": "Mindestens {min} Zeichen",
+    "maxLength": "Maximal {max} Zeichen",
+    "url": "Ungültige URL"
+  }
+}
