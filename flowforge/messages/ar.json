@@ -1,0 +1,235 @@
+{
+  "app": {
+    "name": "FlowForge",
+    "tagline": "أتمتة سير العمل من الجيل القادم",
+    "description": "أنشئ وجدوِل وأتمت سير العمل المعقّد بلبنات بصرية."
+  },
+  "common": {
+    "save": "حفظ",
+    "saving": "جارٍ الحفظ…",
+    "saved": "تم الحفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "deleting": "جارٍ الحذف…",
+    "edit": "تعديل",
+    "create": "إنشاء",
+    "creating": "جارٍ الإنشاء…",
+    "duplicate": "تكرار",
+    "rename": "إعادة تسمية",
+    "search": "بحث",
+    "searchPlaceholder": "ابحث…",
+    "loading": "جارٍ التحميل…",
+    "error": "خطأ",
+    "success": "تم بنجاح",
+    "back": "رجوع",
+    "next": "التالي",
+    "continue": "متابعة",
+    "confirm": "تأكيد",
+    "close": "إغلاق",
+    "retry": "إعادة المحاولة",
+    "tryAgain": "حاول مرة أخرى",
+    "open": "فتح",
+    "copy": "نسخ",
+    "copied": "تم النسخ",
+    "submit": "إرسال",
+    "yes": "نعم",
+    "no": "لا",
+    "more": "المزيد",
+    "less": "أقل",
+    "all": "الكل",
+    "none": "لا شيء",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "view": "عرض",
+    "actions": "إجراءات",
+    "settings": "الإعدادات",
+    "logout": "تسجيل الخروج",
+    "language": "اللغة",
+    "theme": "المظهر",
+    "themeDark": "داكن",
+    "themeLight": "فاتح",
+    "themeSystem": "النظام",
+    "optional": "اختياري",
+    "required": "مطلوب",
+    "comingSoon": "قريباً"
+  },
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "signUp": "إنشاء حساب",
+    "signOut": "تسجيل الخروج",
+    "signInTitle": "مرحباً بعودتك",
+    "signInSubtitle": "سجّل الدخول للوصول إلى سير عملك",
+    "signUpTitle": "أنشئ حساباً",
+    "signUpSubtitle": "ابدأ الأتمتة في دقائق",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "you@example.com",
+    "password": "كلمة المرور",
+    "magicLink": "رابط سحري",
+    "sendMagicLink": "أرسل رابط الدخول",
+    "magicLinkSent": "أرسلنا رابط الدخول إلى {email}.",
+    "magicLinkInstructions": "اضغط على الرابط في البريد لتسجيل الدخول. الرابط صالح لمدة 24 ساعة.",
+    "checkInbox": "تحقّق من البريد",
+    "googleContinue": "المتابعة بحساب Google",
+    "githubContinue": "المتابعة بحساب GitHub",
+    "or": "أو",
+    "termsAgreement": "بتسجيل الدخول فإنك توافق على {terms} و{privacy}.",
+    "terms": "شروط الاستخدام",
+    "privacy": "سياسة الخصوصية",
+    "alreadyHaveAccount": "لديك حساب بالفعل؟",
+    "noAccount": "ليس لديك حساب؟",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "resendEmail": "إعادة إرسال البريد",
+    "errors": {
+      "invalidEmail": "بريد إلكتروني غير صالح",
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "sendFailed": "فشل الإرسال. حاول مرة أخرى."
+    }
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "workflows": "سير العمل",
+    "connections": "الاتصالات",
+    "executions": "عمليات التنفيذ",
+    "templates": "القوالب",
+    "settings": "الإعدادات",
+    "billing": "الفوترة",
+    "team": "الفريق",
+    "apiKeys": "مفاتيح API",
+    "help": "المساعدة",
+    "docs": "الوثائق"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "welcome": "أهلاً بعودتك، {name}",
+    "stats": {
+      "workflows": "سير العمل",
+      "executions": "عمليات التنفيذ",
+      "successRate": "معدّل النجاح",
+      "activeNow": "نشط الآن"
+    },
+    "recentExecutions": "آخر عمليات التنفيذ",
+    "viewAll": "عرض الكل"
+  },
+  "workflows": {
+    "title": "سير العمل",
+    "subtitle": "أنشئ وأدِر أتمتاتك",
+    "create": "إنشاء سير عمل",
+    "createNew": "إنشاء سير عمل جديد",
+    "name": "الاسم",
+    "namePlaceholder": "سير عملي",
+    "description": "الوصف",
+    "descriptionPlaceholder": "ماذا يفعل هذا السير؟",
+    "status": "الحالة",
+    "lastRun": "آخر تشغيل",
+    "neverRun": "لم يُشغّل بعد",
+    "executionsCount": "{count, plural, =0 {لا توجد عمليات تنفيذ} =1 {عملية تنفيذ واحدة} =2 {عمليتا تنفيذ} few {# عمليات تنفيذ} many {# عملية تنفيذ} other {# عملية تنفيذ}}",
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "draft": "مسودّة",
+    "empty": {
+      "title": "لا يوجد سير عمل بعد",
+      "description": "أنشئ أول سير عمل لتبدأ الأتمتة",
+      "cta": "أنشئ أول سير عمل"
+    },
+    "delete": {
+      "title": "حذف سير العمل؟",
+      "description": "لا يمكن التراجع عن هذا الإجراء. سيُحذف سير العمل ”{name}“ وكل عمليات تنفيذه نهائياً.",
+      "confirm": "حذف نهائي"
+    },
+    "limits": {
+      "freeReached": "وصلت إلى حد الخطة المجانية (3 سير عمل). قم بالترقية للمزيد."
+    }
+  },
+  "connections": {
+    "title": "الاتصالات",
+    "subtitle": "أدِر بيانات اعتمادك وتكاملاتك",
+    "create": "إضافة اتصال",
+    "type": "النوع",
+    "name": "الاسم",
+    "createdAt": "أُنشئ في",
+    "empty": {
+      "title": "لا توجد اتصالات بعد",
+      "description": "اربط حساباتك لاستخدامها في سير العمل",
+      "cta": "أضف أول اتصال"
+    }
+  },
+  "executions": {
+    "title": "عمليات التنفيذ",
+    "subtitle": "سجلّ ولوغات كل عمليات تشغيل سير العمل",
+    "status": {
+      "queued": "في الانتظار",
+      "running": "قيد التشغيل",
+      "success": "نجح",
+      "failed": "فشل",
+      "cancelled": "ملغى"
+    },
+    "trigger": {
+      "manual": "يدوي",
+      "schedule": "مجدول",
+      "webhook": "Webhook"
+    },
+    "duration": "المدة",
+    "startedAt": "بدأ في",
+    "finishedAt": "انتهى في",
+    "viewLogs": "عرض السجلات",
+    "retry": "إعادة التشغيل",
+    "empty": {
+      "title": "لا توجد عمليات تنفيذ بعد",
+      "description": "شغّل سير عمل لرؤية السجل هنا"
+    }
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "profile": {
+      "title": "الملف الشخصي",
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "avatar": "الصورة"
+    },
+    "preferences": {
+      "title": "التفضيلات",
+      "language": "اللغة",
+      "theme": "المظهر",
+      "timezone": "المنطقة الزمنية"
+    },
+    "billing": {
+      "title": "الفوترة",
+      "currentPlan": "الخطة الحالية",
+      "upgrade": "ترقية",
+      "free": "مجاني",
+      "pro": "Pro",
+      "team": "فريق",
+      "enterprise": "مؤسسات"
+    },
+    "apiKeys": {
+      "title": "مفاتيح API",
+      "create": "إنشاء مفتاح",
+      "name": "الاسم",
+      "lastUsed": "آخر استخدام",
+      "copyWarning": "انسخ المفتاح الآن — لن يُعرض مرّة أخرى."
+    },
+    "danger": {
+      "title": "منطقة الخطر",
+      "deleteAccount": "حذف الحساب",
+      "deleteAccountConfirm": "هل أنت متأكد؟ ستُحذف كل بياناتك نهائياً."
+    }
+  },
+  "errors": {
+    "generic": "حدث خطأ ما",
+    "genericDescription": "حاول مرة أخرى. إذا استمرّت المشكلة تواصل مع الدعم.",
+    "notFound": "الصفحة غير موجودة",
+    "notFoundDescription": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+    "goHome": "العودة للرئيسية",
+    "unauthorized": "غير مخوّل",
+    "forbidden": "الوصول مرفوض",
+    "rateLimited": "طلبات كثيرة جداً. انتظر لحظة.",
+    "networkError": "خطأ في الشبكة. تحقّق من الاتصال."
+  },
+  "validation": {
+    "required": "هذا الحقل مطلوب",
+    "email": "بريد إلكتروني غير صالح",
+    "minLength": "{min} حرف كحدّ أدنى",
+    "maxLength": "{max} حرف كحدّ أقصى",
+    "url": "رابط غير صالح"
+  }
+}
